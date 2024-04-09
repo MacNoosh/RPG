@@ -4,6 +4,7 @@ import threading
 import keyboard
 import mecanicas_boss
 import jogador
+import tutorial
 from pygame import mixer
 
 #teste222
@@ -21,7 +22,8 @@ def play_music():
 def exibir_opcoes():
     print('1. Iniciar')
     print('2. Iniciar Jogo Salvo')
-    print('3. Sair')
+    print('3. Tutorial')
+    print('4. Sair')
 
 def finalizar_jogo():
     clear_screen()
@@ -39,6 +41,8 @@ def escolher_opcao():
         elif opcao_escolhida == 2:
             iniciar_jogo_salvo()  # Not implemented 
         elif opcao_escolhida == 3:
+            tutorial.tutorial_game()
+        elif opcao_escolhida == 4:
             finalizar_jogo()
         else:
             opcao_invalida()
