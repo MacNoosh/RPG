@@ -34,3 +34,5 @@ def mecanica_2(timeout):
         else:
             time_left = int(timeout - (time.time() - ini_contagem))
             print(f'Tempo restante: {time_left} segundos', end='\r')
+
+#teste
