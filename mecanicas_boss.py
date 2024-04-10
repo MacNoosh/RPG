@@ -93,6 +93,6 @@ def mecanica_6(timeout):
             time_left = int(timeout - (time.time() - ini_contagem))
             print(f'Tempo restante: {time_left} segundos', end='\r')      
                 
-todas_mecanicas = [mecanica_1, mecanica_2, mecanica_3,mecanica_4,mecanica_5,mecanica_6]
+todas_mecanicas = [mecanica_1,mecanica_2,mecanica_3,mecanica_4,mecanica_5,mecanica_6]
 sortear_mecanica = random.choice(todas_mecanicas)
 sortear_mecanica(random.randint(2,3))
