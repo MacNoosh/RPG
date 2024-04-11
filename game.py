@@ -13,7 +13,9 @@ def exibir_opcoes():
 def finalizar_jogo():
     clear_screen()
     print('Jogo encerrado\n')
-
+    input('Aperte qualquer tecla para voltar ao menu incial...')
+    main()
+    
 def escolher_opcao():
     while True:
         exibir_opcoes()
@@ -26,6 +28,7 @@ def escolher_opcao():
                 tutorial_game()
             elif opcao_escolhida == 3:
                 finalizar_jogo()
+                return True  # Retorna True para indicar que o jogo foi finalizado
             else:
                 opcao_invalida()
         except ValueError:
@@ -44,11 +47,11 @@ def opcao_invalida():
     print("Opção inválida. Por favor, escolha uma das opções disponíveis.")
 
 def main():
-    clear_screen()
-    tela_bem_vindo()
-    escolher_opcao()
-    exibir_opcoes()
-    finalizar_jogo()
+    jogo_finalizado = False  # Flag para indicar se o jogo foi finalizado
+    while not jogo_finalizado:
+        clear_screen()
+        tela_bem_vindo()
+        jogo_finalizado = escolher_opcao()
 
 if __name__ == '__main__':
     main()
