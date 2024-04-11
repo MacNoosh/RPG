@@ -26,6 +26,8 @@ def escolher_opcao():
                 executar_mecanicas()
             elif opcao_escolhida == 2:
                 tutorial_game()
+                input('Aperte qualquer tecla para voltar ao menu incial...')
+                main()
             elif opcao_escolhida == 3:
                 finalizar_jogo()
                 return True  # Retorna o jogo foi finalizado
@@ -53,6 +55,7 @@ def main():
         clear_screen()
         tela_bem_vindo()
         jogo_finalizado = escolher_opcao()
+        
 
 if __name__ == '__main__':
     main()
