@@ -28,12 +28,13 @@ def escolher_opcao():
                 tutorial_game()
             elif opcao_escolhida == 3:
                 finalizar_jogo()
-                return True  # Retorna True para indicar que o jogo foi finalizado
+                return True  # Retorna o jogo foi finalizado
             else:
                 opcao_invalida()
         except ValueError:
             opcao_invalida()
-
+            
+# importação das mecanicas tem que ficar dentro da função pq fora incia o game com uma mecanica random
 def executar_mecanicas():
     from mecanicas_boss import mecanica_1, mecanica_2, mecanica_3, mecanica_4, mecanica_5, mecanica_6
     todas_mecanicas = [mecanica_1, mecanica_2, mecanica_3, mecanica_4, mecanica_5, mecanica_6]
@@ -47,7 +48,7 @@ def opcao_invalida():
     print("Opção inválida. Por favor, escolha uma das opções disponíveis.")
 
 def main():
-    jogo_finalizado = False  # Flag para indicar se o jogo foi finalizado
+    jogo_finalizado = False  # adicioneu essa flag pra indicar a finalização do game
     while not jogo_finalizado:
         clear_screen()
         tela_bem_vindo()
