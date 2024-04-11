@@ -1,6 +1,7 @@
 import os
 import random
 import time
+import tutorial
 import keyboard
 
 def tela_bem_vindo():
@@ -25,7 +26,7 @@ def escolher_opcao():
             if opcao_escolhida == 1:
                 executar_mecanicas()
             elif opcao_escolhida == 2:
-                tutorial_game()
+                tutorial.tutorial_game()
             elif opcao_escolhida == 3:
                 finalizar_jogo()
                 return True
@@ -51,19 +52,16 @@ def opcao_invalida():
     print("Opção inválida. Por favor, escolha uma das opções disponíveis.")
 
 def mecanica_1():
-    print("Aperte X, Y, e A em sequência para desviar do ataque!")
+    print("O Boss está vindo em sua direção, rápido RECUE!")
     start_time = time.time()
-    sequence = ["X", "Y", "A"]
+    sequence = ["down", "down"]
     input_sequence = []
     while True:
-        if keyboard.is_pressed("X"):
-            input_sequence.append("X")
+        if keyboard.is_pressed("down"):
+            input_sequence.append("down")
             time.sleep(0.2)  # Aguarda um pequeno intervalo para evitar múltiplas detecções de tecla
-        elif keyboard.is_pressed("Y"):
-            input_sequence.append("Y")
-            time.sleep(0.2)
-        elif keyboard.is_pressed("A"):
-            input_sequence.append("A")
+        elif keyboard.is_pressed("down"):
+            input_sequence.append("down")
             time.sleep(0.2)
         if input_sequence == sequence:
             return True
