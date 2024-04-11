@@ -1,9 +1,53 @@
 import os
 import random
+import pygame
 from tutorial import tutorial_game
 
+pygame.mixer.init()
+
+def tocar_musica():
+    # Joga a musica ai e seja feliz
+    pygame.mixer.music.load(r"C:\Users\usuario\Documents\GitHub\RPG\Goëtia..mp3")
+    # para iniciar a reprodução da música (reprodução infinita, -1)
+    pygame.mixer.music.play(-1)
+
+
 def tela_bem_vindo():
-    print('Seja Bem Vindo ao possivel ultimo dia da sua vida\n\n')
+    print('''
+█▀ █▀▀ ░░█ ▄▀█   █▄▄ █▀▀ █▀▄▀█   █░█ █ █▄░█ █▀▄ █▀█   ▄▀█ █▀█   █▀█ █▀█ █▀ █▀ █ █░█ █▀▀ █░░
+▄█ ██▄ █▄█ █▀█   █▄█ ██▄ █░▀░█   ▀▄▀ █ █░▀█ █▄▀ █▄█   █▀█ █▄█   █▀▀ █▄█ ▄█ ▄█ █ ▀▄▀ ██▄ █▄▄
+
+█░█ █░░ ▀█▀ █ █▀▄▀█ █▀█   █▀▄ █ ▄▀█   █▀▄ ▄▀█   █▀ █░█ ▄▀█   █░█ █ █▀▄ ▄▀█
+█▄█ █▄▄ ░█░ █ █░▀░█ █▄█   █▄▀ █ █▀█   █▄▀ █▀█   ▄█ █▄█ █▀█   ▀▄▀ █ █▄▀ █▀█''')
+    print("""
+                           ,--.             
+                          {    }            
+                          K,   }            
+                         /  `Y`             
+                    _   /   /               
+                   {_'-K.__/                
+                     `/-.__L._              
+                     /  ' /`\_}             
+                    /  ' /     
+            ____   /  ' /                   
+     ,-'~~~~    ~~/  ' /_                   
+   ,'             ``~~~%%',                 
+  (                     %  Y                
+ {     ELDEN {str}ING   %% I                
+{      -                 %  `.              
+|       ',                %  )              
+|        |   ,..__      __. Y               
+|    .,_./  Y ' / ^Y   J   )|               
+\           |' /   |   |   ||               
+ \          L_/    . _ (_,.'(               
+  \,   ,      ^^""' / |      )              
+    \_  \          /,L]     /               
+      '-_`-,       ` `   ./`                
+         `-(_            )                  
+             ^^\..___,.--`                  
+          """)
+     
+ 
 
 def exibir_opcoes():
     print('1. Iniciar')
@@ -50,12 +94,15 @@ def opcao_invalida():
     print("Opção inválida. Por favor, escolha uma das opções disponíveis.")
 
 def main():
-    jogo_finalizado = False  # adicioneu essa flag pra indicar a finalização do game
+    jogo_finalizado = False  # adicionei essa flag pra indicar a finalização do game
     while not jogo_finalizado:
         clear_screen()
         tela_bem_vindo()
+        # Inicie a reprodução da música
+        tocar_musica()
         jogo_finalizado = escolher_opcao()
-        
+        # Pare a música ao sair do loop
+        pygame.mixer.music.stop()
 
 if __name__ == '__main__':
     main()
