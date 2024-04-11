@@ -1,13 +1,6 @@
 import os
-from random import random
-import time
-import threading
-import keyboard
-import mecanicas_boss
-import jogador
-import tutorial
-
-
+import random
+from tutorial import tutorial_game
 
 def tela_bem_vindo():
     print('Seja Bem Vindo ao possivel ultimo dia da sua vida\n\n')
@@ -22,25 +15,27 @@ def finalizar_jogo():
     print('Jogo encerrado\n')
 
 def escolher_opcao():
-    try:
-        opcao_escolhida = int(input('\nEscolha uma opção: '))
-        print(f'Você escolheu a opção {opcao_escolhida}')
-        if opcao_escolhida == 1:
-            mecanicas_boss.mecanica_1(2)
-            mecanicas_boss.mecanica_2(2)
-            mecanicas_boss.mecanica_3(2)
-            mecanicas_boss.mecanica_4(2)
-            mecanicas_boss.mecanica_5(2)
-            mecanicas_boss.mecanica_6(2)
-            jogador.atack_1(2)
-        elif opcao_escolhida == 2:
-            tutorial.tutorial_game()
-        elif opcao_escolhida == 3:
-            finalizar_jogo()
-        else:
+    while True:
+        exibir_opcoes()
+        try:
+            opcao_escolhida = int(input('\nEscolha uma opção: '))
+            print(f'Você escolheu a opção {opcao_escolhida}')
+            if opcao_escolhida == 1:
+                executar_mecanicas()
+            elif opcao_escolhida == 2:
+                tutorial_game()
+            elif opcao_escolhida == 3:
+                finalizar_jogo()
+            else:
+                opcao_invalida()
+        except ValueError:
             opcao_invalida()
-    except ValueError:
-        opcao_invalida()
+
+def executar_mecanicas():
+    from mecanicas_boss import mecanica_1, mecanica_2, mecanica_3, mecanica_4, mecanica_5, mecanica_6
+    todas_mecanicas = [mecanica_1, mecanica_2, mecanica_3, mecanica_4, mecanica_5, mecanica_6]
+    for mecanica in todas_mecanicas:
+        mecanica(timeout=random.randint(2, 3))
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -51,9 +46,9 @@ def opcao_invalida():
 def main():
     clear_screen()
     tela_bem_vindo()
-    exibir_opcoes()
     escolher_opcao()
+    exibir_opcoes()
+    finalizar_jogo()
 
 if __name__ == '__main__':
     main()
-
