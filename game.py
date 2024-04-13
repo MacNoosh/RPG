@@ -7,7 +7,7 @@ pygame.mixer.init()
 
 def tocar_musica():
     # Joga a musica ai e seja feliz
-    pygame.mixer.music.load(r"C:\Users\usuario\Documents\GitHub\RPG\Goëtia..mp3")
+    pygame.mixer.music.load(r"C:\Users\MacNoosh\Documents\GitHub\RPG\Goëtia..mp3")
     # para iniciar a reprodução da música (reprodução infinita, -1)
     pygame.mixer.music.play(-1)
 
@@ -20,31 +20,31 @@ def tela_bem_vindo():
 █░█ █░░ ▀█▀ █ █▀▄▀█ █▀█   █▀▄ █ ▄▀█   █▀▄ ▄▀█   █▀ █░█ ▄▀█   █░█ █ █▀▄ ▄▀█
 █▄█ █▄▄ ░█░ █ █░▀░█ █▄█   █▄▀ █ █▀█   █▄▀ █▀█   ▄█ █▄█ █▀█   ▀▄▀ █ █▄▀ █▀█''')
     print("""
-                           ,--.             
-                          {    }            
-                          K,   }            
-                         /  `Y`             
-                    _   /   /               
-                   {_'-K.__/                
-                     `/-.__L._              
-                     /  ' /`\_}             
-                    /  ' /     
-            ____   /  ' /                   
-     ,-'~~~~    ~~/  ' /_                   
-   ,'             ``~~~%%',                 
-  (                     %  Y                
- {     ELDEN {str}ING   %% I                
-{      -                 %  `.              
-|       ',                %  )              
-|        |   ,..__      __. Y               
-|    .,_./  Y ' / ^Y   J   )|               
-\           |' /   |   |   ||               
- \          L_/    . _ (_,.'(               
-  \,   ,      ^^""' / |      )              
-    \_  \          /,L]     /               
-      '-_`-,       ` `   ./`                
-         `-(_            )                  
-             ^^\..___,.--`                  
+                                                         ,--.             
+                                                        {    }            
+                                                        K,   }            
+                                                        /  `Y`             
+                                                   _   /   /               
+                                                  {_'-K.__/                
+                                                    `/-.__L._              
+                                                    /  ' /`\_}             
+                                                   /  ' /     
+                                           ____   /  ' /                   
+                                    ,-'~~~~    ~~/  ' /_                   
+                                  ,'             ``~~~%%',                 
+                                (                     %  Y                
+                                {     ELDEN {str}ING   %% I                
+                               {      -                 %  `.              
+                              |       ',                %  )              
+                              |        |   ,..__      __. Y               
+                              |    .,_./  Y ' / ^Y   J   )|               
+                              \           |' /   |   |   ||               
+                               \          L_/    . _ (_,.'(               
+                                \,   ,      ^^""' / |      )              
+                                 \_  \          /,L]     /               
+                                   '-_`-,       ` `   ./`                
+                                      `-(_            )                  
+                                         ^^\..___,.--`                  
           """)
      
  
