@@ -1,7 +1,9 @@
 import os
 import random
 import pygame
+from executar_mecanicas import executar_mecanicas
 from tutorial import tutorial_game
+
 
 pygame.mixer.init()
 
@@ -68,6 +70,7 @@ def escolher_opcao():
             print(f'Você escolheu a opção {opcao_escolhida}')
             if opcao_escolhida == 1:
                 executar_mecanicas()
+                main()               
             elif opcao_escolhida == 2:
                 tutorial_game()
                 input('Aperte qualquer tecla para voltar ao menu incial...')
@@ -80,13 +83,6 @@ def escolher_opcao():
         except ValueError:
             opcao_invalida()
             
-# importação das mecanicas tem que ficar dentro da função pq fora incia o game com uma mecanica random
-def executar_mecanicas():
-    from mecanicas_boss import mecanica_1, mecanica_2, mecanica_3, mecanica_4, mecanica_5, mecanica_6
-    todas_mecanicas = [mecanica_1, mecanica_2, mecanica_3, mecanica_4, mecanica_5, mecanica_6]
-    for mecanica in todas_mecanicas:
-        mecanica(timeout=random.randint(2, 3))
-
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 

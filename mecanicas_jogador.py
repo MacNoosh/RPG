@@ -1,19 +1,32 @@
-from colorama import Fore, Back, Style, init
 import time
 import keyboard
+from colorama import Fore, Back, Style, init
 
 def print_slow(texto, atraso):
     for x in texto:
         print(x,end="",flush=True)
         time.sleep(atraso)
+
+def atack_1(timeout):
+    print('DEFINIR FUNCIONALIDADE!\n')
+    ini_contagem = time.time()
+    while True:
+        if keyboard.is_pressed('x') or keyboard.is_pressed('b'):
+            print('Nosa que ataque brutal, -20 de vida pra esse Boss !\n')
+            break
+        elif time.time() - ini_contagem >= timeout:
+            print("Você não conseguiu atacar, tome cuidado ou ele vai te matar !\n")
+            break
+        else:
+            time_left = int(timeout - (time.time() - ini_contagem))
+            print(f'Tempo restante: {time_left} segundos', end='\r')
         
-        
-def mecanica_1(timeout):
-    print_slow("\nO BOSS ESTÁ PREPARANDO UM GOLPE FRONTAL. RÁPIDO !! DESVIE PARA O LADO!!!\n",atraso=0.02)
+def atack_2(timeout):
+    print_slow("\nDEFINIR FUNCIONALIDADE!\n",atraso=0.02)
     ini_contagem = time.time()
     while True:
         if keyboard.is_pressed('left') or keyboard.is_pressed('right'):
-            print("\nVocê desviou do ataque!\n")
+            print("\nDEFINIR FUNCIONALIDADE!\n")
             break
         elif time.time() - ini_contagem >= timeout:
             print("\nVocê não conseguiu desviar e levou X de dano\n")
@@ -22,90 +35,76 @@ def mecanica_1(timeout):
             time_left = int(timeout - (time.time() - ini_contagem))
             print(f'Tempo restante: {time_left} segundos', end='\r')
 
-def mecanica_2(timeout):
-    print_slow("\nO BOSS ESTÁ PREPARANDO UM NOVO ATAQUE, DESSA VEZ ELE ESTÁ COM RAIVA!\n",atraso=0.02)
+def atack_3(timeout):
+    print_slow("\nDEFINIR FUNCIONALIDADE!\n",atraso=0.02)
     ini_contagem = time.time()
     while True:
         if keyboard.is_pressed('up') or keyboard.is_pressed('down'):
-            print("\nVocê foi mais rápido e desviou do ataque!\n")
+            print("\nDEFINIR FUNCIONALIDADE!\n")
             break
         elif time.time() - ini_contagem >= timeout:
-            print("\nVocê não conseguiu desviar e levou X de dano\n")
+            print("\nDEFINIR FUNCIONALIDADE!\n")
             break
         else:
             time_left = int(timeout - (time.time() - ini_contagem))
             print(f'Tempo restante: {time_left} segundos', end='\r')
 
-def mecanica_3(timeout):
-    print_slow("\nATAQUE DE ARMA DO BOSS, USE O ESCUDO!\n",atraso=0.02) #esse texto vai ser alterado
+def atack_4(timeout):
+    print_slow("\nDEFINIR FUNCIONALIDADE!\n",atraso=0.02) #esse texto vai ser alterado
     ini_contagem = time.time()
     while True:
         if keyboard.is_pressed('d'):
-            print("\nVocê bloqueou o ataque!\n") #esse texto vai ser alterado
+            print("\nDEFINIR FUNCIONALIDADE!\n") #esse texto vai ser alterado
             break
         elif time.time() - ini_contagem >= timeout:
-            print("\nVocê não conseguiu bloquear e recebeu X dano\n") #esse texto vai ser alterado
+            print("\nDEFINIR FUNCIONALIDADE!\n") #esse texto vai ser alterado
             break
         else:
             time_left = int(timeout - (time.time() - ini_contagem))
             print(f'Tempo restante: {time_left} segundos', end='\r')
             
-def mecanica_4(timeout):
-    print_slow("\nGOLPE RASTEIRO, PULE!\n",atraso=0.02) #esse texto vai ser alterado
+def atack_5(timeout):
+    print_slow("\nDEFINIR FUNCIONALIDADE!\n",atraso=0.02) #esse texto vai ser alterado
     ini_contagem = time.time()
     while True:
         if keyboard.is_pressed('space'):
-            print("\nVocê saltou o ataque!\n") #esse texto vai ser alterado
+            print("\nDEFINIR FUNCIONALIDADE!\n") #esse texto vai ser alterado
             break
         elif time.time() - ini_contagem >= timeout:
-            print("\nVocê não conseguiu pular e recebeu X dano\n") #esse texto vai ser alterado
+            print("\nDEFINIR FUNCIONALIDADE!\n") #esse texto vai ser alterado
             break
         else:
             time_left = int(timeout - (time.time() - ini_contagem))
             print(f'Tempo restante: {time_left} segundos', end='\r')  
 
-def mecanica_5(timeout):
-    print_slow("\nAPROXIMAÇÃO DO BOSS, RECUE!!\n",atraso=0.02) #esse texto vai ser alterado
+def atack_6(timeout):
+    print_slow("\nADEFINIR FUNCIONALIDADE!\n",atraso=0.02) #esse texto vai ser alterado
     ini_contagem = time.time()
     while True:
         if keyboard.is_pressed('down'): #estudar o código que exija 2 teclas em sequencia, não é esse
-            print("\nVocê saltou o ataque!\n")
+            print("\nDEFINIR FUNCIONALIDADE!\n")
             break
         elif time.time() - ini_contagem >= timeout:
-            print("\nVocê não conseguiu pular e recebeu X dano\n") #esse texto vai ser alterado
+            print("\nDEFINIR FUNCIONALIDADE!\n") #esse texto vai ser alterado
             break
         else:
             time_left = int(timeout - (time.time() - ini_contagem))
             print(f'Tempo restante: {time_left} segundos', end='\r')
 
-def mecanica_6(timeout):
-    print_slow("\nALGUM ATAQUE DO BOSS!! ROLE PARA O LADO\n",atraso=0.02) #esse texto vai ser alterado
+def atack_7(timeout):
+    print_slow("\nDEFINIR FUNCIONALIDADE!\n",atraso=0.02) #esse texto vai ser alterado
     ini_contagem = time.time()
     while True:
         if keyboard.is_pressed('down') and keyboard.is_pressed('left'): #estudar o código que exija 2 teclas em sequencia, não é esse
-            print("\nVocê rolou o ataque!\n")
+            print("\nDEFINIR FUNCIONALIDADE!\n")
             break
         elif time.time() - ini_contagem >= timeout:
-            print("\nVocê não conseguiu rolar e recebeu X dano\n") #esse texto vai ser alterado
+            print("\nDEFINIR FUNCIONALIDADE!\n") #esse texto vai ser alterado
             break
         else:
             time_left = int(timeout - (time.time() - ini_contagem))
             print(f'Tempo restante: {time_left} segundos', end='\r')
-                
-#MECANICA DE COMBINAÇÃO DE TECLAS
-'''def mecanica_1():
-    print("O Boss está vindo em sua direção, rápido RECUE!")
-    start_time = time.time()
-    sequence = ["down", "down"]
-    input_sequence = []
-    while True:
-        if keyboard.is_pressed("down"):
-            input_sequence.append("down")
-            time.sleep(0.2)  # Aguarda um pequeno intervalo para evitar múltiplas detecções de tecla
-        elif keyboard.is_pressed("down"):
-            input_sequence.append("down")
-            time.sleep(0.2)
-        if input_sequence == sequence:
-            return True
-        elif time.time() - start_time >= 3:  # Tempo limite de 3 segundos
-            return False'''
+
+
+
+#teste
