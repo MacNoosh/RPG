@@ -7,9 +7,9 @@ def print_slow(texto, atraso):
         print(x,end="",flush=True)
         time.sleep(atraso)
         
-
+        
 def mecanica_1(timeout):
-    print_slow("\nO BOSS ESTÁ PREPARANDO UM GOLPE FRONTAL. RÁPIDO !! DESVIE PARA O LADO!!!\n",atraso=0.02)
+    print_slow("\nO BOSS ESTÁ PREPARANDO UM GOLPE FRONTAL. RÁPIDO !! DESVIE PARA O LADO!!!\n",atraso=0.05)
     ini_contagem = time.time()
     while True:
         if keyboard.is_pressed('left') or keyboard.is_pressed('right'):
@@ -92,4 +92,20 @@ def mecanica_6(timeout):
             time_left = int(timeout - (time.time() - ini_contagem))
             print(f'Tempo restante: {time_left} segundos', end='\r')
                 
-
+#MECANICA DE COMBINAÇÃO DE TECLAS
+'''def mecanica_1():
+    print("O Boss está vindo em sua direção, rápido RECUE!")
+    start_time = time.time()
+    sequence = ["down", "down"]
+    input_sequence = []
+    while True:
+        if keyboard.is_pressed("down"):
+            input_sequence.append("down")
+            time.sleep(0.2)  # Aguarda um pequeno intervalo para evitar múltiplas detecções de tecla
+        elif keyboard.is_pressed("down"):
+            input_sequence.append("down")
+            time.sleep(0.2)
+        if input_sequence == sequence:
+            return True
+        elif time.time() - start_time >= 3:  # Tempo limite de 3 segundos
+            return False'''
