@@ -1,7 +1,7 @@
 import os
 import random
 import pygame
-from executar_mecanicas import executar_mecanicas
+from mecanicas_executar import executar_mecanicas
 from tutorial import tutorial_game
 
 
