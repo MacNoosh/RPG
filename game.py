@@ -1,5 +1,4 @@
 import os
-import random
 import pygame
 from mecanicas_executar import executar_mecanicas
 from tutorial import tutorial_game
