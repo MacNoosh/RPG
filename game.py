@@ -4,15 +4,11 @@ import pygame
 from mecanicas_executar import executar_mecanicas
 from tutorial import tutorial_game
 
-
 pygame.mixer.init()
 
 def tocar_musica():
-    # Joga a musica ai e seja feliz
-    pygame.mixer.music.load(r"C:\Users\MacNoosh\Documents\GitHub\RPG\Goëtia..mp3")
-    # para iniciar a reprodução da música (reprodução infinita, -1)
+    pygame.mixer.music.load(r"C:\Users\usuario\Documents\GitHub\RPG\Goëtia..mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
     pygame.mixer.music.play(-1)
-
 
 def tela_bem_vindo():
     print('''
@@ -49,8 +45,6 @@ def tela_bem_vindo():
                                          ^^\..___,.--`                  
           """)
      
- 
-
 def exibir_opcoes():
     print('1. Iniciar')
     print('2. Tutorial')
@@ -59,9 +53,8 @@ def exibir_opcoes():
 def finalizar_jogo():
     clear_screen()
     print('Jogo encerrado\n')
-    input('Aperte qualquer tecla para voltar ao menu incial...')
-    main()
-    
+    input('Aperte qualquer tecla para voltar ao menu inicial...')
+
 def escolher_opcao():
     while True:
         exibir_opcoes()
@@ -69,15 +62,14 @@ def escolher_opcao():
             opcao_escolhida = int(input('\nEscolha uma opção: '))
             print(f'Você escolheu a opção {opcao_escolhida}')
             if opcao_escolhida == 1:
+                pygame.mixer.music.stop()
                 executar_mecanicas()
-                main()               
             elif opcao_escolhida == 2:
                 tutorial_game()
-                input('Aperte qualquer tecla para voltar ao menu incial...')
-                main()
+                input('Aperte qualquer tecla para voltar ao menu inicial...')
             elif opcao_escolhida == 3:
                 finalizar_jogo()
-                return True  # Retorna o jogo foi finalizado
+                return True  # Retorna True para indicar que o jogo foi finalizado
             else:
                 opcao_invalida()
         except ValueError:
@@ -90,15 +82,12 @@ def opcao_invalida():
     print("Opção inválida. Por favor, escolha uma das opções disponíveis.")
 
 def main():
-    jogo_finalizado = False  # adicionei essa flag pra indicar a finalização do game
-    while not jogo_finalizado:
+    while True:
         clear_screen()
         tela_bem_vindo()
-        # Inicie a reprodução da música
-        tocar_musica()
-        jogo_finalizado = escolher_opcao()
-        # Pare a música ao sair do loop
-        pygame.mixer.music.stop()
+        tocar_musica()  # Inicie a reprodução da música
+        if escolher_opcao():
+            break  # Sai do loop se o jogo foi finalizado
 
 if __name__ == '__main__':
     main()
