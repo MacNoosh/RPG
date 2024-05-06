@@ -9,7 +9,7 @@ def print_slow(texto, atraso):
         
         
 def mecanica_1(timeout):
-    print_slow("\nO BOSS ESTÁ PREPARANDO UM GOLPE FRONTAL. RÁPIDO !! DESVIE PARA O LADO!!!\n",atraso=0.02)
+    print_slow("\nO BOSS ESTÁ PREPARANDO UM GOLPE FRONTAL. RÁPIDO !! DESVIE PARA O LADO!!!\n",atraso=0.05)
     ini_contagem = time.time()
     while True:
         if keyboard.is_pressed('left') or keyboard.is_pressed('right'):
