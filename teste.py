@@ -32,9 +32,9 @@ def mostrar_barra_vida(vida):
     barra_vida = f'|{"█" * num_simbolos}{"░" * (tamanho_barra - num_simbolos)}|'
     print(Fore.RED + barra_vida + Fore.RESET)
 
-vida_do_boss = 100  # Defina a vida inicial do boss
-tempo_limite = 10  # Defina o tempo limite para realizar o ataque
+vida_do_boss = 100  # Definir a vida do monstrin
+tempo_limite = 10  # Definir o tempo limite pro ataque
 
 vida_do_boss = ataque(tempo_limite, vida_do_boss)
 
-# Você pode adicionar mais chamadas à função 'ataque' para representar mais ataques ou interações do jogador com o boss
+# Podemos adicionar mais chamadas pra função de 'ataque' para representar mais ataques ou interações do jogador com o boss
