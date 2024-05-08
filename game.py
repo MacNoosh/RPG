@@ -1,22 +1,36 @@
 import os
 import pygame
+import time
+from colorama import init, Fore, Style
 from mecanicas_executar import executar_mecanicas
 from tutorial import tutorial_game
 
+init(autoreset=True)
+
 pygame.mixer.init()
 
+def print_slow(texto, atraso):
+    for x in texto:
+        print(x,end="",flush=True)
+        time.sleep(atraso)
+
 def tocar_musica():
-    pygame.mixer.music.load(r"C:\Users\pedro\Documents\GitHub\RPG-python-main\Goëtia..mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
+    pygame.mixer.music.load(r"C:\Users\usuario\Documents\GitHub\RPG\Goëtia..mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
     pygame.mixer.music.play(-1)
 
 def tela_bem_vindo():
-    print('''
+            print_slow(f'''
 █▀ █▀▀ ░░█ ▄▀█   █▄▄ █▀▀ █▀▄▀█   █░█ █ █▄░█ █▀▄ █▀█   ▄▀█ █▀█   █▀█ █▀█ █▀ █▀ █ █░█ █▀▀ █░░
 ▄█ ██▄ █▄█ █▀█   █▄█ ██▄ █░▀░█   ▀▄▀ █ █░▀█ █▄▀ █▄█   █▀█ █▄█   █▀▀ █▄█ ▄█ ▄█ █ ▀▄▀ ██▄ █▄▄
 
 █░█ █░░ ▀█▀ █ █▀▄▀█ █▀█   █▀▄ █ ▄▀█   █▀▄ ▄▀█   █▀ █░█ ▄▀█   █░█ █ █▀▄ ▄▀█
-█▄█ █▄▄ ░█░ █ █░▀░█ █▄█   █▄▀ █ █▀█   █▄▀ █▀█   ▄█ █▄█ █▀█   ▀▄▀ █ █▄▀ █▀█''')
-    print("""
+█▄█ █▄▄ ░█░ █ █░▀░█ █▄█   █▄▀ █ █▀█   █▄▀ █▀█   ▄█ █▄█ █▀█   ▀▄▀ █ █▄▀ █▀█
+
+''',atraso=0.01)
+            ini_contagem = time.time()
+            
+            
+            print("""
                                                          ,--.             
                                                         {    }            
                                                         K,   }            
@@ -42,13 +56,13 @@ def tela_bem_vindo():
                                    '-_`-,       ` `   ./`                
                                       `-(_            )                  
                                          ^^\..___,.--`                  
-          """)
+                    """)
      
 def exibir_opcoes():
-    print('1. Iniciar')
-    print('2. Tutorial')
-    print('3. Sair')
-
+    print(f"{Fore.GREEN}1. Iniciar{Style.RESET_ALL}")
+    print(f"{Fore.BLUE}2. Tutorial{Style.RESET_ALL}")
+    print(f"{Fore.RED}3. Sair{Style.RESET_ALL}")
+    
 def finalizar_jogo():
     clear_screen()
     print('Jogo encerrado\n')
@@ -63,9 +77,12 @@ def escolher_opcao():
             if opcao_escolhida == 1:
                 pygame.mixer.music.stop()
                 executar_mecanicas()
+                finalizar_jogo()
+                main()
             elif opcao_escolhida == 2:
                 tutorial_game()
                 input('Aperte qualquer tecla para voltar ao menu inicial...')
+                main()
             elif opcao_escolhida == 3:
                 finalizar_jogo()
                 return True  # Retorna True para indicar que o jogo foi finalizado
