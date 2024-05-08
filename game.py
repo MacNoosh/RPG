@@ -15,11 +15,7 @@ def print_slow(texto, atraso):
         time.sleep(atraso)
 
 def tocar_musica():
-<<<<<<< Updated upstream
-    pygame.mixer.music.load(r"C:\Users\pedro\Documents\GitHub\RPG-python-main\Goëtia..mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
-=======
-    pygame.mixer.music.load(r"C:\Users\MacNoosh\Documents\GitHub\RPG\Goëtia..mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
->>>>>>> Stashed changes
+    pygame.mixer.music.load(r"C:\Users\usuario\Documents\GitHub\RPG\Goëtia..mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
     pygame.mixer.music.play(-1)
 
 def tela_bem_vindo():
