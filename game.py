@@ -6,7 +6,7 @@ from tutorial import tutorial_game
 pygame.mixer.init()
 
 def tocar_musica():
-    pygame.mixer.music.load(r"C:\Users\usuario\Documents\GitHub\RPG\Goëtia..mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
+    pygame.mixer.music.load(r"C:\Users\pedro\Documents\GitHub\RPG-python-main\Goëtia..mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
     pygame.mixer.music.play(-1)
 
 def tela_bem_vindo():
