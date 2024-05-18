@@ -1,5 +1,5 @@
 from game import *
-
+from tutorial import *
 
 ''' Roteiro elder string
 
@@ -57,21 +57,22 @@ Seu nome tornou-se sinônimo de medo e terror, enquanto ele mergulhava o mundo e
 Apesar dos lampejos de humanidade que ainda ecoavam dentro dele, o cavaleiro continuou em sua cruzada sombria,cada vez mais mergulhado na escuridão.
 Seus atos de crueldade e opressão tornaram-se ainda mais brutais, alimentando-se do poder que ele tanto desejava.
 Assim, ascendeu ao poder, Dreadmo'or!
-""",0.048)
 
-
-print_slow("""No pátio do castelo, a infantaria dos que marcham para combater a dominação do cavaleiro da morte, Dreadmo'or, treinam incansavlmente. Em um momento, você se pega 
+No pátio do castelo, a infantaria dos que marcham para combater a dominação do cavaleiro da morte, Dreadmo'or, treinam incansavlmente. Em um momento, você se pega 
 pensando em todos os acontecimentos que culminaram para essa situação, nesse momento você sente cheiro de sangue... você se distraiu na hora do treinamento, REAJA!
-           DIGITE CORTE PARA ATACAR E FINTA PRA DEFENDER""",0.048)
+           DIGITE CORTE PARA ATACAR / FINTA PRA DEFENDER / DIRECIONAIS PARA DESVIAR""",0.048)
 
-#tutorial
-
+atacar_tutorial(),defender_tutorial()
 
 print_slow("""Após o treinamento, o esquadrão de batedores do reino trazem péssimas notícias, um dos exército de Dreadmo'or marcha para atacar um dos poucos bastiões que 
 sobraram no mundo, a cidade de LUMINARA. O rei, Leothan "O Dourado", rapidamente convoca seus generais, recrutando todos os guardas reais da cidade. 
 
-A caminho para a defesa das muralhas da cidade, um antigo mago do reino chamado Galadran Sussurroestelar te observa fixamente, você escolher deixar de lado e preparar-se para 
+A caminho para a defesa das muralhas da cidade, um antigo mago do reino chamado Galadran Sussurroestelar te observa fixamente, você escolhe deixar de lado e preparar-se para 
 eventual batalha contra o exército de Dreadmo'or.
+
+O ataque começa no cair da noite, após horas de uma batalha sangrenta, o exército do cavaleiro da morte parece nunca acabar. A tropa de Dreadmo'or consegue se infiltrar dentro da
+da cidade de Luminara, todos sob o comando de Leothan voltam para tentar defende-lo. Depois de chegar nos portões do castelo e viscerar mais uma criatura do exército inimigo, 
+você percebe uma aura pesada no campo de batalha, uma aura emanando sede de poder e sangue, o próprio Dreadmo'or estava ali. 
 
 
 
