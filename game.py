@@ -79,7 +79,7 @@ def escolher_opcao():
     while True:
         exibir_opcoes()
         try:
-            opcao_escolhida = int(input(f'\n {Fore.RED}Escolha uma opção:{Style.RESET_ALL}  '))
+            opcao_escolhida = int(input(f'\n{Fore.RED}Escolha uma opção:{Style.RESET_ALL}  '))
             print(f'Você escolheu a opção {opcao_escolhida}')
             if opcao_escolhida == 1:
                 pygame.mixer.music.stop()
