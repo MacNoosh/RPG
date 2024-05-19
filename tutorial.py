@@ -32,7 +32,7 @@ CONTRA-ATACAR:|  D   | +  |  A   |
           """)   
     
     
-print_slow('teste',1)    
+'''print_slow('teste',1)    
     
 palavras_de_ataque = {'corte':1}
 palavras_de_defesa = {'finta':8}
@@ -70,4 +70,4 @@ def defender_tutorial():
         
         else:
             print(f'Legal! Você conseguiu se defender de um ataque em {tempo_de_defesa:.1f} segundos.')
-            break
+            break'''

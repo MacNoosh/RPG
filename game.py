@@ -109,7 +109,7 @@ def main():
         tela_bem_vindo()
         tocar_musica()  # Inicie a reprodução da música
         if escolher_opcao():
-            break  # Sai do loop se o jogo foi finalizado
+            break  # Sai do loop se o jogo foi finalizado0
 
 if __name__ == '__main__':
     main()
