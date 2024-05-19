@@ -61,6 +61,7 @@ No pátio do castelo, a infantaria dos que marcham para combater a dominação d
 pensando em todos os acontecimentos que culminaram para essa situação, nesse momento você sente cheiro de sangue... você se distraiu na hora do treinamento, REAJA!
            DIGITE CORTE PARA ATACAR / FINTA PRA DEFENDER / DIRECIONAIS PARA DESVIAR""",0.048)
 
+input('sim') #aqui vai entrar o tutorial
 
 print_slow("""Após o treinamento, o esquadrão de batedores do reino trazem péssimas notícias, um dos exército de Dreadmo'or marcha para atacar um dos poucos bastiões que 
 sobraram no mundo, a cidade de LUMINARA. O rei, Leothan "O Dourado", rapidamente convoca seus generais, recrutando todos os guardas reais da cidade. 
@@ -79,6 +80,6 @@ você percebe uma aura pesada no campo de batalha, uma aura emanando sede de pod
 
 
 
-nome_player = input(print_slow('Você se lembra do seu nome?\n',0.1))
+nome_player = input(print('Você se lembra do seu nome?\n'))
 
 

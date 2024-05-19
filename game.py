@@ -4,24 +4,26 @@ import time
 import keyboard
 from colorama import init, Fore, Style
 from mecanicas_executar import executar_mecanicas
-from tutorial import tutorial_game
+
 
 init(autoreset=True)
 
 pygame.mixer.init()
-
+ultimo_texto = ""
 def print_slow(texto, atraso):
+    global ultimo_texto
     for x in texto:
         if keyboard.is_pressed('down'):
             clear_screen()
             print(texto)
             break
         else:
-            print(x,end="",flush=True)
+            print(x, end="", flush=True)
+            ultimo_texto += x
             time.sleep(atraso)
-
+            
 def tocar_musica():
-    pygame.mixer.music.load(r"C:\Users\usuario\Documents\GitHub\RPG\Goëtia..mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
+    pygame.mixer.music.load(r"C:\Users\pedro\Documents\GitHub\RPG-python-main\Goëtia..mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
     pygame.mixer.music.play(-1)
 
 def tela_bem_vindo():
