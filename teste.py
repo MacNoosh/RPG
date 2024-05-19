@@ -38,3 +38,4 @@ tempo_limite = 10  # Definir o tempo limite pro ataque
 vida_do_boss = ataque(tempo_limite, vida_do_boss)
 
 # Podemos adicionar mais chamadas pra função de 'ataque' para representar mais ataques ou interações do jogador com o boss
+#rafael
