@@ -31,8 +31,8 @@ def tela_bem_vindo():
 █▀ █▀▀ ░░█ ▄▀█   █▄▄ █▀▀ █▀▄▀█   █░█ █ █▄░█ █▀▄ █▀█   ▄▀█ █▀█   █▀█ █▀█ █▀ █▀ █ █░█ █▀▀ █░░
 ▄█ ██▄ █▄█ █▀█   █▄█ ██▄ █░▀░█   ▀▄▀ █ █░▀█ █▄▀ █▄█   █▀█ █▄█   █▀▀ █▄█ ▄█ ▄█ █ ▀▄▀ ██▄ █▄▄
 
-█░█ █░░ ▀█▀ █ █▀▄▀█ █▀█   █▀▄ █ ▄▀█   █▀▄ ▄▀█   █▀ █░█ ▄▀█   █░█ █ █▀▄ ▄▀█
-█▄█ █▄▄ ░█░ █ █░▀░█ █▄█   █▄▀ █ █▀█   █▄▀ █▀█   ▄█ █▄█ █▀█   ▀▄▀ █ █▄▀ █▀█
+█░█ █░░ ▀█▀ █ █▀▄▀█ █▀█  █▀▄ █ ▄▀█   █▀▄ ▄▀█   █▀ █░█ ▄▀█   █░█ █ █▀▄ ▄▀█
+█▄█ █▄▄ ░█░ █ █░▀░█ █▄█  █▄▀ █ █▀█   █▄▀ █▀█   ▄█ █▄█ █▀█   ▀▄▀ █ █▄▀ █▀█
 
 ''',atraso=0.01)
             ini_contagem = time.time()
@@ -42,12 +42,11 @@ def tela_bem_vindo():
                                                          ,--.             
                                                         {    }            
                                                         K,   }            
-                                                        /  `Y`             
-                                                   _   /   /               
-                                                  {_'-K.__/                
-                                                    `/-.__L._              
-                                                    /  ' /`\_}             
-                                                   /  ' /     
+                                                       /  `Y`             
+                                                  _   /   /               
+                                                 {_'-K.__/                
+                                                   `/-.__L._              
+                                                   /  ' /`\_}                 
                                            ____   /  ' /                   
                                     ,-'~~~~    ~~/  ' /_                   
                                   ,'             ``~~~%%',                 
@@ -67,9 +66,9 @@ def tela_bem_vindo():
                     """)
      
 def exibir_opcoes():
-    print(f"{Fore.GREEN}1. Iniciar{Style.RESET_ALL}")
-    print(f"{Fore.BLUE}2. Tutorial{Style.RESET_ALL}")
-    print(f"{Fore.RED}3. Sair{Style.RESET_ALL}")
+    print(f"1. {Fore.RED}Iniciar{Style.RESET_ALL}")
+    print(f"2. {Fore.RED}Tutorial{Style.RESET_ALL}")
+    print(f"3. {Fore.RED}Sair{Style.RESET_ALL}")
     
 def finalizar_jogo():
     clear_screen()
@@ -80,7 +79,7 @@ def escolher_opcao():
     while True:
         exibir_opcoes()
         try:
-            opcao_escolhida = int(input('\nEscolha uma opção: '))
+            opcao_escolhida = int(input(f'\n {Fore.RED}Escolha uma opção:{Style.RESET_ALL}  '))
             print(f'Você escolheu a opção {opcao_escolhida}')
             if opcao_escolhida == 1:
                 pygame.mixer.music.stop()
