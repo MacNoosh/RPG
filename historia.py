@@ -70,16 +70,24 @@ A caminho para a defesa das muralhas da cidade, um antigo mago do reino chamado 
 eventual batalha contra o exército de Dreadmo'or.
 
 O ataque começa no cair da noite, após horas de uma batalha sangrenta, o exército do cavaleiro da morte parece nunca acabar. A tropa de Dreadmo'or consegue se infiltrar dentro da
-da cidade de Luminara, todos sob o comando de Leothan voltam para tentar defende-lo. Depois de chegar nos portões do castelo e viscerar mais uma criatura do exército inimigo, 
-você percebe uma aura pesada no campo de batalha, uma aura emanando sede de poder e sangue, o próprio Dreadmo'or estava ali. 
+da cidade de Luminara, todos sob o comando de Leothan voltam para o castelo para tentar defende-lo. Depois de chegar nos portões do castelo e viscerar mais uma criatura do exército 
+inimigo, você percebe uma aura pesada no campo de batalha, uma aura emanando sede de poder e sangue, o próprio Dreadmo'or estava ali. O ascendido avança ferozmente ao castelo, você 
+vendo seus companheiros de batalha caindo um por um, em um ato de depesero, você avança em direção a Dreadmo'or. Após uma tentativa de golpe falha, o cavaleiro da morte desfere um 
+golpefatal. A diferença de força é discrepante...Você vê sua visão desvaindo.................aos poucos....................escuro....................................................
+..................MORTE...................................................................................LUZ? Sua visão volta, você não está mais no campo de batalha, o lugar te
+conforta de certa maneira, você sente seu corpo leve e escuta uma voz no fundo, dizendo: "Que a luz dourada da esperança brilhe incessantemente em teu caminho, guiando-te através 
+das sombras do ascendido. Que a tua alma seja banhada por essa luz divina, lembrando-te de que a esperança é a palavra que nunca se apaga.". Após as palavras da desconhecida, você 
+volta a vida no campo de batalha, ensanguentado e com pouca força vital, algo dentro de você grita!!!""",0.048)
 
+esperanca = input('sim?')
 
-
-             """,0.048)
-
-
-
-
-nome_player = input(print('Você se lembra do seu nome?\n'))
-
-
+print_slow(""" Você tenta gritar algo mas apenas sai um gemido inaudível. Quase desmaindo novamente você ainda consegue acompanhar o que vinha a seguir na batalha, por algum motivo, depois 
+    da sua ressureição, Dreadmo'or parecia enfraquecido. Galadran Sussurroestelar emerge, e em um dialeto estranho, fala algo sonoramente parecido com sagrado. Após a fala de Galadran
+    uma explosão de luz recai sobre a cidade e o cavaleiro da morte dá a ordem de retirada para seu exército.
+     
+    Você acorda no acampamento dos feridos. Um pouco desnorteado ainda, você vê a figura embaçada de uma silueta familiar de um senhor com barba e cabelos brancos sua visão volta aos
+    poucos e você percebe que é Galadran. O mago do reino observa em silêncio por alguns minutos e logo faz a pergunta:
+    """,0.048)
+    
+    #Solistra deusa
+nome_player = input('Você se lembra do seu nome?')
