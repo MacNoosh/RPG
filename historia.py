@@ -50,21 +50,19 @@ tenebris - cavaleiro da morte local
 
 print_slow("""
 Depois anos de lealdade e serviço ao seu reino, o cavaleiro Bravmo'or enfrentou uma traição devastadora que o levou a uma jornada sombria, consumido pela dor e pela escuridão, 
-ele se entregou ao poder da morte em busca de vingança. Como cavaleiro da morte, ele ceifou vidas sem propósito, perdido em um ciclo de destruição.
-Seu desejo de transformar a terra em um mundo das trevas o consumiu, espalhando desespero e destruição por onde passava.
-Seu nome tornou-se sinônimo de medo e terror, enquanto ele mergulhava o mundo em um abismo de desolação.
-Apesar dos lampejos de humanidade que ainda ecoavam dentro dele, o cavaleiro continuou em sua cruzada sombria,cada vez mais mergulhado na escuridão.
-Seus atos de crueldade e opressão tornaram-se ainda mais brutais, alimentando-se do poder que ele tanto desejava.
-Assim, ascendeu ao poder, Dreadmo'or!
+ele se entregou ao poder da morte em busca de vingança. Como cavaleiro da morte, ele ceifou vidas sem propósito, perdido em um ciclo de destruição.Seu desejo de transformar a 
+terra em um mundo das trevas o consumiu, espalhando desespero e destruição por onde passava. Seu nome tornou-se sinônimo de medo e terror, enquanto ele mergulhava o mundo em um 
+abismo de desolação. Apesar dos lampejos de humanidade que ainda ecoavam dentro dele, o cavaleiro continuou em sua cruzada sombria,cada vez mais mergulhado na escuridão.Seus atos 
+de crueldade e opressão tornaram-se ainda mais brutais, alimentando-se do poder que ele tanto desejava. Assim, ascendeu ao poder, Dreadmo'or!
 
-No pátio do castelo, a infantaria dos que marcham para combater a dominação do cavaleiro da morte, Dreadmo'or, treinam incansavlmente. Em um momento, você se pega 
-pensando em todos os acontecimentos que culminaram para essa situação, nesse momento você sente cheiro de sangue... você se distraiu na hora do treinamento, REAJA!
+No pátio do castelo, a infantaria dos que marcham para combater a dominação do cavaleiro da morte, Dreadmo'or, treinam incansavlmente. Em um momento, você se pega pensando em todos
+os acontecimentos que culminaram para essa situação, nesse momento você sente cheiro de sangue... você se distraiu na hora do treinamento, REAJA!
            DIGITE CORTE PARA ATACAR / FINTA PRA DEFENDER / DIRECIONAIS PARA DESVIAR""",0.048)
 
 input('sim') #aqui vai entrar o tutorial
 
-print_slow("""Após o treinamento, o esquadrão de batedores do reino trazem péssimas notícias, um dos exército de Dreadmo'or marcha para atacar um dos poucos bastiões que 
-sobraram no mundo, a cidade de LUMINARA. O rei, Leothan "O Dourado", rapidamente convoca seus generais, recrutando todos os guardas reais da cidade. 
+print_slow("""Após o treinamento, o esquadrão de batedores do reino trazem péssimas notícias, um dos exército de Dreadmo'or marcha para atacar um dos poucos bastiões que sobraram 
+no mundo, a cidade de LUMINARA. O rei, Leothan "O Dourado", rapidamente convoca seus generais, recrutando todos os guardas reais da cidade. 
 
 A caminho para a defesa das muralhas da cidade, um antigo mago do reino chamado Galadran Sussurroestelar te observa fixamente, você escolhe deixar de lado e preparar-se para 
 eventual batalha contra o exército de Dreadmo'or.
@@ -76,18 +74,28 @@ vendo seus companheiros de batalha caindo um por um, em um ato de depesero, voc�
 golpefatal. A diferença de força é discrepante...Você vê sua visão desvaindo.................aos poucos....................escuro....................................................
 ..................MORTE...................................................................................LUZ? Sua visão volta, você não está mais no campo de batalha, o lugar te
 conforta de certa maneira, você sente seu corpo leve e escuta uma voz no fundo, dizendo: "Que a luz dourada da esperança brilhe incessantemente em teu caminho, guiando-te através 
-das sombras do ascendido. Que a tua alma seja banhada por essa luz divina, lembrando-te de que a esperança é a palavra que nunca se apaga.". Após as palavras da desconhecida, você 
+das sombras do ascendido. 
+Que a tua alma seja banhada por essa luz divina, lembrando-te de que a esperança é a palavra que nunca se apaga.". Após as palavras da desconhecida, você 
 volta a vida no campo de batalha, ensanguentado e com pouca força vital, algo dentro de você grita!!!""",0.048)
 
-esperanca = input('sim?')
-
-print_slow(""" Você tenta gritar algo mas apenas sai um gemido inaudível. Quase desmaindo novamente você ainda consegue acompanhar o que vinha a seguir na batalha, por algum motivo, depois 
-    da sua ressureição, Dreadmo'or parecia enfraquecido. Galadran Sussurroestelar emerge, e em um dialeto estranho, fala algo sonoramente parecido com sagrado. Após a fala de Galadran
-    uma explosão de luz recai sobre a cidade e o cavaleiro da morte dá a ordem de retirada para seu exército.
+esperanca = input('.........')
+if esperanca == 'esperança':
+    print_slow('fim', 0.048)
+else:
+    print_slow(""" Você tenta gritar algo mas apenas sai um gemido inaudível. Quase desmaindo novamente você ainda consegue acompanhar o que vinha a seguir na batalha, por algum 
+    motivo, depois da sua ressureição, Dreadmo'or parecia enfraquecido. Galadran Sussurroestelar emerge, e em um dialeto estranho, fala algo sonoramente parecido com sagrado. Após 
+    a fala de Galadran uma explosão de luz recai sobre a cidade e o cavaleiro da morte dá a ordem de retirada para seu exército.
      
-    Você acorda no acampamento dos feridos. Um pouco desnorteado ainda, você vê a figura embaçada de uma silueta familiar de um senhor com barba e cabelos brancos sua visão volta aos
-    poucos e você percebe que é Galadran. O mago do reino observa em silêncio por alguns minutos e logo faz a pergunta:
+    Você acorda no acampamento dos feridos, ainda um pouco desnorteado ainda, você vê a figura embaçada de uma silueta familiar de um senhor com barba e cabelos brancos, ele te 
+    observa fixamente por alguns minutos e pergunta:
     """,0.048)
     
-    #Solistra deusa
-nome_player = input('Você se lembra do seu nome?')
+    nome_player = input('Você se lembra do seu nome, jovem guarda?')
+
+    print_slow(f""" Você tenta lembrar do seu nome, e com um pouco de dificuldade você fala {nome_player}. Depois de sua consciência voltar ao normal, você pouco a pouco lembra de todo
+    desenrolar da batalha. O senhor de barba e cabelos grisalhos era nada mais que Galadran. O mago do reino então curioso lhe faz uma pergunta: " {nome_player}, você viu o sol? sentiu
+    a luz?" Você acena com a cabeça, lembrando das palavras da voz que ouvira. Logo em seguida Galadran continua em um tom sério: "Isso pode ser vital para a derrocada de Dreadmo'or,
+    o que vou lhe con
+    """,0.048)
+
+  #Solistra deusa
