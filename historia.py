@@ -1,4 +1,5 @@
 from game import *
+from funcoes import *
 
 ''' Roteiro elder string
 
@@ -78,24 +79,22 @@ das sombras do ascendido.
 Que a tua alma seja banhada por essa luz divina, lembrando-te de que a esperança é a palavra que nunca se apaga.". Após as palavras da desconhecida, você 
 volta a vida no campo de batalha, ensanguentado e com pouca força vital, algo dentro de você grita!!!""",0.048)
 
-esperanca = input('.........')
-if esperanca == 'esperança':
-    print_slow('fim', 0.048)
-else:
-    print_slow(""" Você tenta gritar algo mas apenas sai um gemido inaudível. Quase desmaindo novamente você ainda consegue acompanhar o que vinha a seguir na batalha, por algum 
-    motivo, depois da sua ressureição, Dreadmo'or parecia enfraquecido. Galadran Sussurroestelar emerge, e em um dialeto estranho, fala algo sonoramente parecido com sagrado. Após 
-    a fala de Galadran uma explosão de luz recai sobre a cidade e o cavaleiro da morte dá a ordem de retirada para seu exército.
+esperança(3)
+
+print_slow(""" Você tenta gritar algo mas apenas sai um gemido inaudível. Quase desmaindo novamente você ainda consegue acompanhar o que vinha a seguir na batalha, por algum motivo, depois 
+    da sua ressureição, Dreadmo'or parecia enfraquecido. Galadran Sussurroestelar emerge, e em um dialeto estranho, fala algo sonoramente parecido com sagrado. Após a fala de Galadran
+    uma explosão de luz recai sobre a cidade e o cavaleiro da morte dá a ordem de retirada para seu exército.
      
     Você acorda no acampamento dos feridos, ainda um pouco desnorteado ainda, você vê a figura embaçada de uma silueta familiar de um senhor com barba e cabelos brancos, ele te 
     observa fixamente por alguns minutos e pergunta:
     """,0.048)
     
-    nome_player = input('Você se lembra do seu nome, jovem guarda?')
+nome_player = input('Você se lembra do seu nome, jovem guarda?')
 
-    print_slow(f""" Você tenta lembrar do seu nome, e com um pouco de dificuldade você fala {nome_player}. Depois de sua consciência voltar ao normal, você pouco a pouco lembra de todo
-    desenrolar da batalha. O senhor de barba e cabelos grisalhos era nada mais que Galadran. O mago do reino então curioso lhe faz uma pergunta: " {nome_player}, você viu o sol? sentiu
-    a luz?" Você acena com a cabeça, lembrando das palavras da voz que ouvira. Logo em seguida Galadran continua em um tom sério: "Isso pode ser vital para a derrocada de Dreadmo'or,
-    o que vou lhe con
+print_slow(f""" Você tenta lembrar do seu nome, e com um pouco de dificuldade você fala {nome_player}. Depois de sua consciência voltar ao normal, você pouco a pouco lembra de todo
+desenrolar da batalha. O senhor de barba e cabelos grisalhos era nada mais que Galadran. O mago do reino então curioso lhe faz uma pergunta: " {nome_player}, você viu o sol? sentiu
+a luz?" Você acena com a cabeça, lembrando das palavras da voz que ouvira. Logo em seguida Galadran continua em um tom sério: "Isso pode ser vital para a derrocada de Dreadmo'or,
+o que vou lhe con
     """,0.048)
 
   #Solistra deusa
