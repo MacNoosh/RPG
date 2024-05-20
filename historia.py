@@ -1,4 +1,5 @@
 from game import *
+from funcoes import *
 
 ''' Roteiro elder string
 
@@ -79,7 +80,7 @@ conforta de certa maneira, você sente seu corpo leve e escuta uma voz no fundo,
 das sombras do ascendido. Que a tua alma seja banhada por essa luz divina, lembrando-te de que a esperança é a palavra que nunca se apaga.". Após as palavras da desconhecida, você 
 volta a vida no campo de batalha, ensanguentado e com pouca força vital, algo dentro de você grita!!!""",0.048)
 
-esperanca = input('sim?')
+esperança(3)
 
 print_slow(""" Você tenta gritar algo mas apenas sai um gemido inaudível. Quase desmaindo novamente você ainda consegue acompanhar o que vinha a seguir na batalha, por algum motivo, depois 
     da sua ressureição, Dreadmo'or parecia enfraquecido. Galadran Sussurroestelar emerge, e em um dialeto estranho, fala algo sonoramente parecido com sagrado. Após a fala de Galadran
