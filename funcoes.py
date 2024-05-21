@@ -13,7 +13,3 @@ def esperança(tempo):
         elif tempo_final < tempo or resposta == 'esperança':
             print('VOCÊ ZEROU O JOGO') #fazer funcao para acabar o game
             break
-
-esperança(2.5)
-
-print_slow('alow alow alow alow', 0.048)
