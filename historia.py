@@ -89,13 +89,14 @@ print_slow(""" Você tenta gritar algo mas apenas sai um gemido inaudível. Quas
     """,0.048)
     
 nome_player = input('Você se lembra do seu nome, jovem guarda?')
+nome_do_jogo = 'Elder {Str}ing'
 
 print_slow(f""" Você tenta lembrar do seu nome, e com um pouco de dificuldade você fala {nome_player}. Depois de sua consciência voltar ao normal, você pouco a pouco lembra de todo
 desenrolar da batalha. O senhor de barba e cabelos grisalhos era nada mais que Galadran. O mago do reino então curioso lhe faz uma pergunta: "{nome_player}, você viu o sol? sentiu
 a luz?" Você acena com a cabeça, lembrando das palavras da voz que ouvira. Logo em seguida Galadran continua em um tom sério: "Isso pode ser vital para a derrocada de Dreadmo'or,
 o que vou lhe contar é um costume antigo, em que os abeçoados pelos Deuses conseguem utilizar. Aparentemente você foi abençoado pela Deusa mesma que eu, o nome dela é Solistra, a 
-Deusa do sol e da luz. A prática herdada dos Deuses são as palavras de conhecimento, ou se você quiser chamar, as Elder String. Essas palavras podem ser adquiridas durante sua vida
-mas nem todos percebem o seu significado apenas os afortunados." Você sem entender como entrou nessa armadilha do destino fica aterrorizado, qunado pulou para desferir o golpe em 
+Deusa do sol e da luz. A prática herdada dos Deuses são as palavras de conhecimento, ou se você quiser chamar, as {nome_do_jogo}. Essas palavras podem ser adquiridas durante sua vida
+mas nem todos percebem o seu significado apenas os afortunados." Você sem entender como entrou nessa armadilha do destino fica aterrorizado, quando pulou para desferir o golpe em 
 Dreadmo'or foi pela pura emoção do momento da batalha, agora você terá que enfretar o mal de frente. Galadran continua: "{nome_player} Não 
     """,0.048)
 
