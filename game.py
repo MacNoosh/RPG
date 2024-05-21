@@ -23,7 +23,7 @@ def print_slow(texto, atraso):
             time.sleep(atraso)
             
 def tocar_musica():
-    pygame.mixer.music.load(r"C:\Users\MacNoosh\Documents\GitHub\RPG\Goëtia..mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
+    pygame.mixer.music.load(r"C:\Users\MacNoosh\Documents\GitHub\RPG\Cronus.mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
     pygame.mixer.music.play(-1)
 
 def tela_bem_vindo():
