@@ -5,22 +5,13 @@ import keyboard
 from colorama import init, Fore, Style
 from mecanicas_executar import executar_mecanicas
 from tutorial import tutorial_game
+from historia import *
+from funcoes import *
 
 init(autoreset=True)
 
 pygame.mixer.init()
-ultimo_texto = ""
-def print_slow(texto, atraso):
-    global ultimo_texto
-    for x in texto:
-        if keyboard.is_pressed('down'):
-            clear_screen()
-            print(texto)
-            break
-        else:
-            print(x, end="", flush=True)
-            ultimo_texto += x
-            time.sleep(atraso)
+
             
 def tocar_musica():
     pygame.mixer.music.load(r"C:\Users\MacNoosh\Documents\GitHub\RPG\Cronus.mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
@@ -83,6 +74,7 @@ def escolher_opcao():
             print(f'Você escolheu a opção {opcao_escolhida}')
             if opcao_escolhida == 1:
                 pygame.mixer.music.stop()
+                historia()
                 executar_mecanicas()
                 finalizar_jogo()
                 main()

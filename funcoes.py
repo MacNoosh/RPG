@@ -14,6 +14,16 @@ def esperança(tempo):
             print('VOCÊ ZEROU O JOGO') #fazer funcao para acabar o game
             break
 
-esperança(2.5)
 
-print_slow('alow alow alow alow', 0.048)
+ultimo_texto = ""
+def print_slow(texto, atraso):
+    global ultimo_texto
+    for x in texto:
+        if keyboard.is_pressed('down'):
+            clear_screen()
+            print(texto)
+            break
+        else:
+            print(x, end="", flush=True)
+            ultimo_texto += x
+            time.sleep(atraso)
