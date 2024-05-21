@@ -13,6 +13,7 @@ def esperança(tempo):
         elif tempo_final < tempo or resposta == 'esperança':
             print('VOCÊ ZEROU O JOGO') #fazer funcao para acabar o game
             break
+<<<<<<< HEAD
 
 
 ultimo_texto = ""
@@ -27,3 +28,5 @@ def print_slow(texto, atraso):
             print(x, end="", flush=True)
             ultimo_texto += x
             time.sleep(atraso)
+=======
+>>>>>>> e044ad27cb7543b116a9f46bdc741ca6ac449a4e
