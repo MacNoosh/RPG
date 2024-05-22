@@ -10,7 +10,7 @@ def esperança(tempo):
         tempo_final = time.time() - tempo_inicial
         if tempo_final >= tempo:
             break
-        elif tempo_final < tempo or resposta == 'esperança':
+        elif tempo_final < tempo and resposta == 'esperança':
             print('VOCÊ ZEROU O JOGO') #fazer funcao para acabar o game
             break
 
@@ -27,3 +27,12 @@ def print_slow(texto, atraso):
             print(x, end="", flush=True)
             ultimo_texto += x
             time.sleep(atraso)
+
+def contador(texto,fim,textofinal):
+    contador = 1
+    print(texto)
+    while fim >= contador:
+        print(contador, end = " ", flush = True)
+        contador+= 1
+        time.sleep(1)
+    print(textofinal)

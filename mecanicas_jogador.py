@@ -1,11 +1,73 @@
 import time
 import keyboard
 from colorama import Fore, Back, Style, init
+from funcoes import *
 
 def print_slow(texto, atraso):
     for x in texto:
         print(x,end="",flush=True)
         time.sleep(atraso)
+
+def tutorial_atk(tempo):
+    tempo_inicial = time.time()
+    palavra = input('Diga a palavra de ATAQUE que você aprendeu até agora: ')
+    while True:
+        tempo_final = time.time() - tempo_inicial
+        if tempo_final >= tempo:
+            print(f'Demorou muito ({tempo_final:.1f} segundos)! Diga mais rápido!')
+            tutorial_atk(tempo)
+            break
+        elif tempo_final < tempo and palavra == 'corte':
+            print(f'Legal! Você executou o seu ataque em {tempo_final:.1f} segundos. Lembre-se, quanto mais veloz, mais eficaz será o seu golpe!') 
+            break
+        else:
+            print('Você não usou a palavra correta. Tente novamente.')
+            tutorial_atk(tempo)
+            break
+
+def tutorial_defesa(tempo):
+    tempo_inicial = time.time()
+    palavra = input('Agora vamos treinar sua defesa, diga a palavra de DEFESA que você aprendeu até agora: ')
+    while True:
+        tempo_final = time.time() - tempo_inicial
+        if tempo_final >= tempo:
+            print(f'Demorou muito ({tempo_final:.1f} segundos)! Diga mais rápido!')
+            tutorial_defesa(tempo)
+            break
+        elif tempo_final < tempo and palavra == 'finta':
+            print(f'Legal! Você executou o seu ataque em {tempo_final:.1f} segundos. A defesa também se aproveitará da sua agilidade!') 
+            break
+        else:
+            print('Você não usou a palavra correta. Tente novamente.')
+            tutorial_defesa(tempo)
+            break
+
+def tutorial_desvio(tempo):
+    tempo_inicial = time.time()
+    print('DESVIE PARA A ESQUERDA')
+    while True:
+        tempo_final = time.time() - tempo_inicial
+        if tempo_final > tempo:
+            print('DEMOROU MUITO! Foi golpeado, tente novamente')
+            tutorial_desvio(tempo)
+            break
+        
+        elif keyboard.is_pressed('left'):
+            print(f'Belo desvio! Desviou em {tempo_final:.1f}s')
+            contador('Prepare-se',3,'')
+            print('AGORA DESVIE PARA A DIREITA!')
+            tempo_inicial = time.time()
+            while True:
+                tempo_final = time.time() - tempo_inicial
+                if tempo_final > tempo:
+                    print('DEMOROU MUITO! Foi golpeado, tente novamente')
+                    tutorial_desvio(tempo)
+                    break
+                elif keyboard.is_pressed('right'):
+                    print(f'Belo desvio! Desviou em {tempo_final:.1f}s')
+                    print('Você concluiu o tutorial!')
+                    break
+            break
 
 def atack_1(timeout):
     print('DEFINIR FUNCIONALIDADE!\n')
