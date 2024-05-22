@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\funcoes.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:funcoes.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\game.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:game.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\historia.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:historia.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -21,6 +13,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\mecanicas_jogador.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:mecanicas_jogador.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\funcoes.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:funcoes.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\game.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:game.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "game.py",
               "DocumentMoniker": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\game.py",
               "RelativeDocumentMoniker": "game.py",
               "ToolTip": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\game.py",
               "RelativeToolTip": "game.py",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAABAAAABPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFwAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2024-05-19T22:37:20.742Z",
               "IsPinned": true,
@@ -48,33 +48,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "funcoes.py",
               "DocumentMoniker": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\funcoes.py",
               "RelativeDocumentMoniker": "funcoes.py",
               "ToolTip": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\funcoes.py",
               "RelativeToolTip": "funcoes.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2024-05-21T00:27:31.18Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "mecanicas_jogador.py",
               "DocumentMoniker": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\mecanicas_jogador.py",
               "RelativeDocumentMoniker": "mecanicas_jogador.py",
               "ToolTip": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\mecanicas_jogador.py",
               "RelativeToolTip": "mecanicas_jogador.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFwAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2024-05-21T00:23:10.478Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "mecanicas_executar.py",
               "DocumentMoniker": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\mecanicas_executar.py",
               "RelativeDocumentMoniker": "mecanicas_executar.py",
@@ -87,13 +87,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "historia.py",
               "DocumentMoniker": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\historia.py",
               "RelativeDocumentMoniker": "historia.py",
               "ToolTip": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\historia.py",
               "RelativeToolTip": "historia.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGYAAAASAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2024-05-21T00:02:37.06Z",
               "EditorCaption": ""

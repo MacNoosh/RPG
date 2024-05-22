@@ -3,11 +3,6 @@ import keyboard
 from colorama import Fore, Back, Style, init
 from funcoes import *
 
-def print_slow(texto, atraso):
-    for x in texto:
-        print(x,end="",flush=True)
-        time.sleep(atraso)
-
 def tutorial_atk(tempo):
     tempo_inicial = time.time()
     palavra = input('Diga a palavra de ATAQUE que você aprendeu até agora: ')
