@@ -2,6 +2,7 @@ import time
 import keyboard
 from colorama import Fore, Back, Style, init
 from funcoes import *
+import random
 
 def tutorial_atk(tempo):
     tempo_inicial = time.time()
@@ -162,7 +163,29 @@ def atack_7(timeout):
             time_left = int(timeout - (time.time() - ini_contagem))
             print(f'Tempo restante: {time_left} segundos', end='\r')
 
+def desvio_animado(texto,tecla,tempo,emoji):
+    lista = 0
+    while lista == 0:
+        for i in range(1, 130, 1):
+            print(emoji.rjust(i))
+            time.sleep(0.05)
+            clear_screen()
+            if i == random.randint(60,109):
+                print(texto.rjust(i))
+
+                desviou = False
+                for x in range(tempo*10):
+                    if keyboard.is_pressed(tecla):
+                        lista += 1
+                        print('Você desviou!')
+                        desviou = True
+                        break
+                    time.sleep(0.1)
+                if not desviou:
+                    print('Você perdeu!')
+                    lista += 1
+                    break
+
+                break
 
 
-
-#teste

@@ -2,6 +2,8 @@ from funcoes import *
 from mecanicas_jogador import *
 import time
 import keyboard
+import random
+import emoji
 
 
 def historia():
@@ -65,11 +67,14 @@ def historia():
                DIGITE CORTE PARA ATACAR / FINTA PRA DEFENDER / DIRECIONAIS PARA DESVIAR""",0.048)
 
     contador('Prepare-se',3,'VAI!')
+    desvio_animado('PULE!!','space',3,'🔥')
+    contador('',3,'')
     tutorial_atk(3)
     contador('',3,'')
     tutorial_defesa(3)
     contador('',3,'')
     tutorial_desvio(3)
+    
 
     print_slow("""Após o treinamento, o esquadrão de batedores do reino trazem péssimas notícias, um dos exército de Dreadmo'or marcha para atacar um dos poucos bastiões que sobraram 
     no mundo, a cidade de LUMINARA. O rei, Leothan "O Dourado", rapidamente convoca seus generais, recrutando todos os guardas reais da cidade. 
