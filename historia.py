@@ -124,13 +124,24 @@ def historia():
 
 
 #DIVISÃO DOS CAMINHOS
+#CRIAR UMA DEF PARA 2.1 DE MUTIPLOS COMBATES, PELO MENOS 3
     escolha_caminho_contrario = 'cord ou flore contrario'
 
     print_slow(f"""Logo após a sua escolha do seu destino, o mago fala que irá pela {escolha_caminho_contrario}, que cada caminho há pelo menos 2 Generais de Dreadmo'or e que cada 
     um deles foi almadioçoada com um pedaço da alma do cavaleiro da morte, cabe a vocês dois enfraquece-lo ainda mais para obter mais chances de sucesso. Depois de um breve aceno,
     o Galadran o encoraja dizendo "{nome_player} chegando primeiro na Fortaleza, me espere!".
 
-    Saindo pelo portão norte você se direciona para a Floresta dos Susurros Antigos
+    Saindo pelo portão norte você se direciona para a Floresta dos Susurros Antigos, nela você é recepcionado por um dríade chamada Acantha e explica que trantanto a floresta como
+    merece, a floresta te recompensará com proteção. Acantha pede uma escolta até um cemtiério do seu antigo povo, você a escuta e aceita seu pedido.
+
+    2 - Seguindo pela estrada principal, vocês encotram o cemitério que Acantha havia mencionado. Você escuta um barulho estranho vindo das das catacumbas, você deseja investigar?
+
+    2.1 - Você pede a Acantha que fique em segurança for invertigar o barulho, após um exploração rápida você encontra alguns mortos-vivos, você deseja enfrenta-los?
+    
+    2.2 - Após você derrotar 
+
+
+
 
 
                
