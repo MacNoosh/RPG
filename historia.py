@@ -124,6 +124,23 @@ def historia():
 
 
 #DIVISÃO DOS CAMINHOS
+    escolha_caminho_contrario = 'cord ou flore contrario'
+
+    print_slow(f"""Logo após a sua escolha do seu destino, o mago fala que irá pela {escolha_caminho_contrario}, que cada caminho há pelo menos 2 Generais de Dreadmo'or e que cada 
+    um deles foi almadioçoada com um pedaço da alma do cavaleiro da morte, cabe a vocês dois enfraquece-lo ainda mais para obter mais chances de sucesso. Depois de um breve aceno,
+    o Galadran o encoraja dizendo "{nome_player} chegando primeiro na Fortaleza, me espere!".
+
+    Saindo pelo portão norte você se direciona para a Floresta dos Susurros Antigos
+
+
+               
+               
+               
+               
+               
+               
+               
+               """,0.048)
 
 
           
