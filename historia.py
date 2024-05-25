@@ -109,11 +109,21 @@ def historia():
     print_slow(f""" Você tenta lembrar do seu nome, e com um pouco de dificuldade você fala {nome_player}. Depois de sua consciência voltar ao normal, você pouco a pouco lembra de todo
     desenrolar da batalha. O senhor de barba e cabelos grisalhos era nada mais que Galadran. O mago do reino então curioso lhe faz uma pergunta: "{nome_player}, você viu o sol? sentiu
     a luz?" Você acena com a cabeça, lembrando das palavras da voz que ouvira. Logo em seguida Galadran continua em um tom sério: "Isso pode ser vital para a derrocada de Dreadmo'or,
-    o que vou lhe contar é um costume antigo, em que os abeçoados pelos Deuses conseguem utilizar. Aparentemente você foi abençoado pela Deusa mesma que eu, o nome dela é Solistra, a 
-    Deusa do sol e da luz. A prática herdada dos Deuses são as palavras de conhecimento, ou se você quiser chamar, as {nome_do_jogo}. Essas palavras podem ser adquiridas durante sua vida
-    mas nem todos percebem o seu significado apenas os afortunados." Você sem entender como entrou nessa armadilha do destino fica aterrorizado, quando pulou para desferir o golpe em 
-    Dreadmo'or foi pela pura emoção do momento da batalha, agora você terá que enfretar o mal de frente. Galadran continua: "{nome_player} Não 
+    o que vou lhe contar é um costume antigo, em que os abeçoados pelos Deuses conseguem utilizar. Aparentemente você foi abençoado pela mesma Deusa que eu, o nome dela é Solistra, a 
+    Deusa do sol e da luz. A prática herdada dos Deuses são as palavras de conhecimento, ou se você quiser chamar, as {nome_do_jogo}. Essas palavras podem ser adquiridas durante sua 
+    vida mas nem todos percebem o seu significado apenas os afortunados." Você sem entender como entrou nessa armadilha do destino fica aterrorizado, quando pulou para desferir o golpe
+    em Dreadmo'or foi pela pura emoção do momento da batalha, agora você terá que enfretar o mal de frente. Galadran continua: "{nome_player} não tema jovem guarda, da mesma maneira
+    que Solistra nos dá responsabilidade nos dá poder, amanhã cedo partiremos em busca de Dreadmo'or." Você ainda impactado do que acontecera, mal consegue dormir, mas o cansaço lhe
+    vence.
+
+
+    No dia seguinte Galadran lhe espera no portão, explica que a melhor hora para tentar uma investida seria nesse momento que o cavaleiro da morte está enfraquecido, dando duas 
+    opções de caminho para seguir até a Fortaleza do Desespero sendo eles, a Floresta dos Sussuros Antigos ou a Cordilheira das Chamas Devoradoras. Logo em seguida você pensa e fala:
         """,0.048)
+    
 
 
-          #Solistra deusa
+#DIVISÃO DOS CAMINHOS
+
+
+          
