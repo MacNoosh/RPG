@@ -3,7 +3,7 @@ from mecanicas_jogador import *
 import time
 import keyboard
 import random
-import emoji
+#import emoji
 
 
 def historia():
