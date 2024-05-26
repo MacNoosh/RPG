@@ -106,7 +106,7 @@ def historia():
     nome_player = input('Você se lembra do seu nome, jovem guarda?')
     nome_do_jogo = 'Elder {Str}ing'
 
-    print_slow(f""" Você tenta lembrar do seu nome, e com um pouco de dificuldade você fala {nome_player}. Depois de sua consciência voltar ao normal, você pouco a pouco lembra de todo
+    print_slow(f""" Você tenta lembrar do seu nome, e com um pouco de dificuldade você fala{nome_player}. Depois de sua consciência voltar ao normal, você pouco a pouco lembra de todo
     desenrolar da batalha. O senhor de barba e cabelos grisalhos era nada mais que Galadran. O mago do reino então curioso lhe faz uma pergunta: "{nome_player}, você viu o sol? sentiu
     a luz?" Você acena com a cabeça, lembrando das palavras da voz que ouvira. Logo em seguida Galadran continua em um tom sério: "Isso pode ser vital para a derrocada de Dreadmo'or,
     o que vou lhe contar é um costume antigo, em que os abeçoados pelos Deuses conseguem utilizar. Aparentemente você foi abençoado pela mesma Deusa que eu, o nome dela é Solistra, a 
@@ -124,34 +124,38 @@ def historia():
 
 
 #DIVISÃO DOS CAMINHOS
-#CRIAR UMA DEF PARA 2.1 DE MUTIPLOS COMBATES, PELO MENOS 3
     escolha_caminho_contrario = 'cord ou flore contrario'
 
     print_slow(f"""Logo após a sua escolha do seu destino, o mago fala que irá pela {escolha_caminho_contrario}, que cada caminho há pelo menos 2 Generais de Dreadmo'or e que cada 
     um deles foi almadioçoada com um pedaço da alma do cavaleiro da morte, cabe a vocês dois enfraquece-lo ainda mais para obter mais chances de sucesso. Depois de um breve aceno,
     o Galadran o encoraja dizendo "{nome_player} chegando primeiro na Fortaleza, me espere!".
 
-    Saindo pelo portão norte você se direciona para a Floresta dos Susurros Antigos, nela você é recepcionado por um dríade chamada Acantha e explica que trantanto a floresta como
-    merece, a floresta te recompensará com proteção. Acantha pede uma escolta até um cemtiério do seu antigo povo, você a escuta e aceita seu pedido.
+    Saindo pelo portão norte você se direciona para a Floresta dos Susurros Antigos, nela você é recepcionado por um dríade chamada Galatea e explica que trantanto a floresta como
+    merece, a floresta te recompensará com proteção. Acantha pede uma escolta até um cemtiério do seu antigo povo, você a escuta e aceita seu pedido.""",0.048)
 
-    2 - Seguindo pela estrada principal, vocês encotram o cemitério que Acantha havia mencionado. Você escuta um barulho estranho vindo das das catacumbas, você deseja investigar?
+    print_slow(f""" 2 - Seguindo pela estrada principal, vocês encotram o cemitério que Galatea havia mencionado. Você escuta um barulho estranho vindo das das catacumbas. 
+    {nome_player} deseja investigar?""",0.048)
 
-    2.1 - Você pede a Acantha que fique em segurança for invertigar o barulho, após um exploração rápida você encontra alguns mortos-vivos, você deseja enfrenta-los?
+    print_slow(f"""2.1 - Você pede a Galatea que fique em segurança for invertigar o barulho, após um exploração rápida você encontra alguns mortos-vivos.{nome_player}deseja 
+               enfrenta-los?""",0.048)
+    #CRIAR UMA DEF PARA 2.1 DE MUTIPLOS COMBATES, PELO MENOS 3
     
-    2.2 - Após você derrotar 
+    print_slow(f"""2.2 - Após derrotar o grupo de mortos-vivos, você percebe que na verdade eles foram invocados por alguma coisa. Adentrando nas partes mais profundas da catacumbas 
+    você sente um poder sombrio, com cautela você se aproxima e se vê diante de um dos Generais de Dreadmo'or, Necroth o Senhor da Sepultura.{nome_player} deseja enfrenta-lo?""",0.048)
 
+    #Aprender nova palavra com galathea?
 
+    print_slow(f"""Continuando pela estrada da floresta você chega a cidade élfica de Thalassëa, após uma rápida verificação nos portões, o acesso a cidade é liberado. Um clima de
+    desconfiança paira sobre a cidade. Conversando com os comerciantes, você descobre que há relatos de furtos e como  os elfos estão fazendo frente contra o exército do cavaleiro da
+    morte os ladrões se aproveitam da impunidade. Após a explicação os comerciante suplicam por ajuda, {nome_player} dejesa ajuda-los?
+    """,0.048)
 
+    print_slow(f"""Continuando pela estrada da floresta você chega a cidade élfica de Thalassëa, após uma rápida verificação nos portões, o acesso a cidade é liberado. Um clima de
+    desconfiança paira sobre a cidade. Conversando com os comerciantes, você descobre que há relatos de furtos e como  os elfos estão fazendo frente contra o exército do cavaleiro da
+    morte os ladrões se aproveitam da impunidade. Após a explicação os comerciante suplicam por ajuda, {nome_player} dejesa ajuda-los?""",0.048)
+    #Def dos mortos-vivos 2.1 pode ser reutilizada aqui ou mudada.
 
-
-               
-               
-               
-               
-               
-               
-               
-               """,0.048)
+    
 
 
           
