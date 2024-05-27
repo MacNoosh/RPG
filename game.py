@@ -14,11 +14,11 @@ pygame.mixer.init()
 
             
 def tocar_musica():
-    pygame.mixer.music.load(r"C:\Users\DOUGLAS\Documents\GitHub\RPG\Cronus.mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
+    pygame.mixer.music.load(r"C:\Users\pedro\Documents\GitHub\RPG-python-main\Cronus.mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
     pygame.mixer.music.play(-1)
 
 def tocar_musica_2():
-    pygame.mixer.music.load(r"C:\Users\DOUGLAS\Documents\GitHub\RPG\teste.mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
+    pygame.mixer.music.load(r"C:\Users\pedro\Documents\GitHub\RPG-python-main\teste.mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
     pygame.mixer.music.play(-1)
 
 def tela_bem_vindo():
