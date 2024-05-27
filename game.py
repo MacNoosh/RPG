@@ -81,7 +81,6 @@ def escolher_opcao():
                 clear_screen()
                 tocar_musica_2()
                 historia()
-                executar_mecanicas()
                 finalizar_jogo()
                 main()
             elif opcao_escolhida == 2:
