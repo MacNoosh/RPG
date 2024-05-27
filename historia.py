@@ -145,17 +145,38 @@ def historia():
 
     #Aprender nova palavra com galathea?
 
-    print_slow(f"""Continuando pela estrada da floresta você chega a cidade élfica de Thalassëa, após uma rápida verificação nos portões, o acesso a cidade é liberado. Um clima de
-    desconfiança paira sobre a cidade. Conversando com os comerciantes, você descobre que há relatos de furtos e como  os elfos estão fazendo frente contra o exército do cavaleiro da
+    print_slow(f"""3. Continuando pela estrada da floresta você chega a cidade élfica de Thalassëa, após uma rápida verificação nos portões, o acesso a cidade é liberado. Um clima de
+    desconfiança paira sobre a cidade. Conversando com os comerciantes, você descobre que há relatos de furtos e como os elfos estão fazendo frente contra o exército do cavaleiro da
     morte os ladrões se aproveitam da impunidade. Após a explicação os comerciante suplicam por ajuda, {nome_player} dejesa ajuda-los?
     """,0.048)
 
-    print_slow(f"""Continuando pela estrada da floresta você chega a cidade élfica de Thalassëa, após uma rápida verificação nos portões, o acesso a cidade é liberado. Um clima de
-    desconfiança paira sobre a cidade. Conversando com os comerciantes, você descobre que há relatos de furtos e como  os elfos estão fazendo frente contra o exército do cavaleiro da
-    morte os ladrões se aproveitam da impunidade. Após a explicação os comerciante suplicam por ajuda, {nome_player} dejesa ajuda-los?""",0.048)
-    #Def dos mortos-vivos 2.1 pode ser reutilizada aqui ou mudada.
+    print_slow(f"""3.1 Pegando informações nos suburbios da cidade você toma ciência que o grupo de ladrões encontram-se dentro de uma caverna aos arredores da cidade, entrando na 
+    caverna você se depara com um grupo de 4 ladrões, PREPARE-SE!""",0.048)
+     #Def dos mortos-vivos 2.1 pode ser reutilizada aqui ou mudada.
 
-    
+
+    print_slow(f"""4. Saindo da cidade de Thalassëa, prosseguindo por mais alguns dias, você se depara com um templo antigo. Aproximando-se um pouco mais percebe que há um tabuleta
+    de mármore que tinha gravado em si a seguinte frase: "Santuário da Eterna Renovação". Um pouco contraditório, já que você percebe que ao redor do templo há muita vegetação em 
+    estado de putrefação. Você deseja adentrar no templo, {nome_player}?""",0.048)
+
+    print_slow(f"""4.1 Aos poucos você vai se aprofundando dentro do templo e começa a entender a quem um dia pertenceu, as próprias paredes contam a sua história, esse templo 
+    pertencia aos Druidas e servia para a manutenção e equilibrio da floresta em volta dele. Chegando mais perto do salão principal você sente o cheiro de putrefação ainda mais 
+    forte, na antesala nota-se um corpo semi-devorado de um animal e logo em seguida um Urso Corrompido, você deseja enfrenta-lo {nome_player}? """,0.048)
+
+    print_slow(f"""4.2 Matando o Urso, o caminho para a sala principal está aberto e você já presume do que está adiante é um dos Generais de Dreadmo'or. {nome_player} deseja
+    enfrenta-lo?""",0.048)
+
+    print_slow(f"""5. Quanto mais próximo da Fortaleza do Desespero, você percebe um estado de putrefação avançado na floresta no qual a transformou num grande pântano. O cheiro era
+    insuportável, você não via a hora de sair daquele lugar insalubre, derrepente você nota um vulto passandos entre as árvores, e pergunta a si mesmo que tipo de ser viveria naquelas
+    condições, {nome_player} deseja seguir o vulto? """,0.048)
+
+    print_slow(f"""5.1 Com curiosidade você vai em busca da resposta e seguindo adiante encontra uma cabana cheia de limo e fungos pelas paredes, aparentemente a porta se encontrava
+    meio aberta e você não hesita em entrar nessa cabana. Com um relanse de olhar você já sabia qual criatura vivia ali, com caldeirões e restos mortais de animais, era óbivio ser
+    um covil de uma Bruxa. Quando já estava pronto para partir, tarde demais! {nome_player}, PREPARE-SE""",0.048)
+
+    #CAVALEIRO DA MORTE - FIM DA FLORESTA
+
+
 
 
           
