@@ -100,13 +100,13 @@ def historia():
     nome_player = input('Você se lembra do seu nome, jovem guarda?')
     nome_do_jogo = 'Elder {Str}ing'
 
-    print_slow(f""" Você tenta lembrar do seu nome, e com um pouco de dificuldade você fala{nome_player}. Depois de sua consciência voltar ao normal, você pouco a pouco lembra de todo
-    desenrolar da batalha. O senhor de barba e cabelos grisalhos era nada mais que Galadran. O mago do reino então curioso lhe faz uma pergunta: "{nome_player}, você viu o sol? sentiu
+    print_slow(f""" Você tenta lembrar do seu nome, e com um pouco de dificuldade você fala {nome_player}. Depois de sua consciência voltar ao normal, você pouco a pouco lembra de todo
+    desenrolar da batalha. O senhor de barba e cabelos grisalhos era nada mais que Galadran. O mago do reino então curioso lhe faz uma pergunta: " {nome_player}, você viu o sol? sentiu
     a luz?" Você acena com a cabeça, lembrando das palavras da voz que ouvira. Logo em seguida Galadran continua em um tom sério: "Isso pode ser vital para a derrocada de Dreadmo'or,
     o que vou lhe contar é um costume antigo, em que os abeçoados pelos Deuses conseguem utilizar. Aparentemente você foi abençoado pela mesma Deusa que eu, o nome dela é Solistra, a 
     Deusa do sol e da luz. A prática herdada dos Deuses são as palavras de conhecimento, ou se você quiser chamar, as {nome_do_jogo}. Essas palavras podem ser adquiridas durante sua 
     vida mas nem todos percebem o seu significado apenas os afortunados." Você sem entender como entrou nessa armadilha do destino fica aterrorizado, quando pulou para desferir o golpe
-    em Dreadmo'or foi pela pura emoção do momento da batalha, agora você terá que enfretar o mal de frente. Galadran continua: "{nome_player} não tema jovem guarda, da mesma maneira
+    em Dreadmo'or foi pela pura emoção do momento da batalha, agora você terá que enfretar o mal de frente. Galadran continua: " {nome_player} não tema jovem guarda, da mesma maneira
     que Solistra nos dá responsabilidade nos dá poder, amanhã cedo partiremos em busca de Dreadmo'or." Você ainda impactado do que acontecera, mal consegue dormir, mas o cansaço lhe
     vence.
 
@@ -127,7 +127,7 @@ def historia():
     if caminho == 'FLORESTA':
         print_slow(f"""Logo após a sua escolha do seu destino, o mago fala que irá pela Cordilheira das chamas devoradoras, que cada caminho há pelo menos 2 Generais de Dreadmo'or e que cada 
             um deles foi almadioçoada com um pedaço da alma do cavaleiro da morte, cabe a vocês dois enfraquece-lo ainda mais para obter mais chances de sucesso. Depois de um breve aceno,
-            o Galadran o encoraja dizendo "{nome_player} chegando primeiro na Fortaleza, me espere!".
+            o Galadran o encoraja dizendo " {nome_player} chegando primeiro na Fortaleza, me espere!".
 
             Saindo pelo portão norte você se direciona para a Floresta dos Susurros Antigos, nela você é recepcionado por um dríade chamada Galatea e explica que trantanto a floresta como
             merece, a floresta te recompensará com proteção. Acantha pede uma escolta até um cemtiério do seu antigo povo, você a escuta e aceita seu pedido.
@@ -149,7 +149,7 @@ def historia():
             
             if resposta == 'S':
                 print_slow(f"""Após derrotar o grupo de mortos-vivos, você percebe que na verdade eles foram invocados por alguma coisa. Adentrando nas partes mais profundas da catacumbas 
-                você sente um poder sombrio, com cautela você se aproxima e se vê diante de um dos Generais de Dreadmo'or, Necroth o Senhor da Sepultura.{nome_player} deseja enfrenta-lo?""",0.048)
+                você sente um poder sombrio, com cautela você se aproxima e se vê diante de um dos Generais de Dreadmo'or, Necroth o Senhor da Sepultura. {nome_player} deseja enfrenta-lo?""",0.048)
 
         print_slow(f"""Continuando pela estrada da floresta você chega a cidade élfica de Thalassëa, após uma rápida verificação nos portões, o acesso a cidade é liberado. Um clima de
                 desconfiança paira sobre a cidade. Conversando com os comerciantes, você descobre que há relatos de furtos e como os elfos estão fazendo frente contra o exército do cavaleiro da
