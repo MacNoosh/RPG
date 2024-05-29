@@ -66,6 +66,7 @@ def historia():
     os acontecimentos que culminaram para essa situação, nesse momento você sente cheiro de sangue... você se distraiu na hora do treinamento, REAJA!
                DIGITE CORTE PARA ATACAR / FINTA PRA DEFENDER / DIRECIONAIS PARA DESVIAR""",0.048)
 
+    palavras_atk = [{'palavra': 'corte', 'dano': 1}]
     tutorial_desvio(3)
    
     

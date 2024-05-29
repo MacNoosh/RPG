@@ -36,3 +36,6 @@ def contador(texto,fim,textofinal):
         contador+= 1
         time.sleep(1)
     print(textofinal)
+
+def aprendizado(palavra,dano):
+    palavras_atk.append({'palavra': palavra, 'dano': dano})
