@@ -117,70 +117,144 @@ def historia():
 
 
 #DIVISÃO DOS CAMINHOS
-    resposta = ''
+
+
+
     caminho = input('Cordilheira ou Floresta?').upper()
-    while True:
-        if caminho != 'FLORESTA' and caminho != 'CORDILHEIRA':
-            caminho = input('Caminho desconhecido. Cordilheira ou Floresta?').upper()
-        elif caminho == 'FLORESTA':
-            print_slow(f"""Logo após a sua escolha do seu destino, o mago fala que irá pela Cordilheira das chamas devoradoras, que cada caminho há pelo menos 2 Generais de Dreadmo'or e que cada 
+    while caminho not in ['CORDILHEIRA', 'FLORESTA']:
+        caminho = input('Cordilheira ou Floresta?').upper()
+        
+    if caminho == 'FLORESTA':
+        print_slow(f"""Logo após a sua escolha do seu destino, o mago fala que irá pela Cordilheira das chamas devoradoras, que cada caminho há pelo menos 2 Generais de Dreadmo'or e que cada 
             um deles foi almadioçoada com um pedaço da alma do cavaleiro da morte, cabe a vocês dois enfraquece-lo ainda mais para obter mais chances de sucesso. Depois de um breve aceno,
             o Galadran o encoraja dizendo "{nome_player} chegando primeiro na Fortaleza, me espere!".
 
             Saindo pelo portão norte você se direciona para a Floresta dos Susurros Antigos, nela você é recepcionado por um dríade chamada Galatea e explica que trantanto a floresta como
-            merece, a floresta te recompensará com proteção. Acantha pede uma escolta até um cemtiério do seu antigo povo, você a escuta e aceita seu pedido.""",0.048)
+            merece, a floresta te recompensará com proteção. Acantha pede uma escolta até um cemtiério do seu antigo povo, você a escuta e aceita seu pedido.
 
-            print_slow(f""" 2 - Seguindo pela estrada principal, vocês encotram o cemitério que Galatea havia mencionado. Você escuta um barulho estranho vindo das das catacumbas. 
+            Seguindo pela estrada principal, vocês encotram o cemitério que Galatea havia mencionado. Você escuta um barulho estranho vindo das das catacumbas. 
             {nome_player} deseja investigar?""",0.048)
-            resposta = input('> ').upper()
-            if resposta in ['SIM','S']: 
-                print_slow(f"""2.1 - Você pede a Galatea que fique em segurança for invertigar o barulho, após um exploração rápida você encontra alguns mortos-vivos.{nome_player}deseja 
-                enfrenta-los?""",0.048)
-                resposta = input('> ').upper()
-                if resposta in ['SIM','S']: 
-                #CRIAR UMA DEF PARA 2.1 DE MUTIPLOS COMBATES, PELO MENOS 3
-                    print_slow(f"""2.2 - Após derrotar o grupo de mortos-vivos, você percebe que na verdade eles foram invocados por alguma coisa. Adentrando nas partes mais profundas da catacumbas 
+        
+        resposta = input('Continuar? [S/N] ').upper()    
+        while resposta not in 'SN':
+            resposta = input('Continuar? [S/N] ').upper()
+        
+        if resposta == 'S':
+            print_slow(f"""Você pede a Galatea que fique em segurança for invertigar o barulho, após um exploração rápida você encontra alguns mortos-vivos.{nome_player}deseja 
+            enfrenta-los?""",0.048)
+        
+            resposta = input('Continuar? [S/N] ').upper()
+            while resposta not in 'SN':
+                resposta = input('Continuar? [S/N] ').upper()
+            
+            if resposta == 'S':
+                print_slow(f"""Após derrotar o grupo de mortos-vivos, você percebe que na verdade eles foram invocados por alguma coisa. Adentrando nas partes mais profundas da catacumbas 
                 você sente um poder sombrio, com cautela você se aproxima e se vê diante de um dos Generais de Dreadmo'or, Necroth o Senhor da Sepultura.{nome_player} deseja enfrenta-lo?""",0.048)
-            #Aprender nova palavra com galathea?
-            
-            
-            else:
-                print_slow(f"""3. Continuando pela estrada da floresta você chega a cidade élfica de Thalassëa, após uma rápida verificação nos portões, o acesso a cidade é liberado. Um clima de
+
+        print_slow(f"""Continuando pela estrada da floresta você chega a cidade élfica de Thalassëa, após uma rápida verificação nos portões, o acesso a cidade é liberado. Um clima de
                 desconfiança paira sobre a cidade. Conversando com os comerciantes, você descobre que há relatos de furtos e como os elfos estão fazendo frente contra o exército do cavaleiro da
                 morte os ladrões se aproveitam da impunidade. Após a explicação os comerciante suplicam por ajuda, {nome_player} dejesa ajuda-los?
                 """,0.048)
-                resposta = input('> ').upper()
-                if resposta in ['SIM','S']: 
-                    print_slow(f"""3.1 Pegando informações nos suburbios da cidade você toma ciência que o grupo de ladrões encontram-se dentro de uma caverna aos arredores da cidade, entrando na 
+        
+        resposta = input('Continuar? [S/N] ').upper()    
+        while resposta not in 'SN':
+            resposta = input('Continuar? [S/N] ').upper()
+        
+        if resposta == 'S':
+            print_slow(f"""Pegando informações nos suburbios da cidade você toma ciência que o grupo de ladrões encontram-se dentro de uma caverna aos arredores da cidade, entrando na 
                     caverna você se depara com um grupo de 4 ladrões, PREPARE-SE!""",0.048)
-                    #Def dos mortos-vivos 2.1 pode ser reutilizada aqui ou mudada.
-                else:
-                    print_slow(f"""4. Saindo da cidade de Thalassëa, prosseguindo por mais alguns dias, você se depara com um templo antigo. Aproximando-se um pouco mais percebe que há um tabuleta
+        
+        print_slow(f"""Saindo da cidade de Thalassëa, prosseguindo por mais alguns dias, você se depara com um templo antigo. Aproximando-se um pouco mais percebe que há um tabuleta
                     de mármore que tinha gravado em si a seguinte frase: "Santuário da Eterna Renovação". Um pouco contraditório, já que você percebe que ao redor do templo há muita vegetação em 
                     estado de putrefação. Você deseja adentrar no templo, {nome_player}?""",0.048)
-                    resposta = input('> ').upper()
-                    if resposta in ['SIM','S']: 
-                        print_slow(f"""4.1 Aos poucos você vai se aprofundando dentro do templo e começa a entender a quem um dia pertenceu, as próprias paredes contam a sua história, esse templo 
+        
+        resposta = input('Continuar? [S/N] ').upper()    
+        while resposta not in 'SN':
+            resposta = input('Continuar? [S/N] ').upper()
+        
+        if resposta == 'S':
+            print_slow(f"""Aos poucos você vai se aprofundando dentro do templo e começa a entender a quem um dia pertenceu, as próprias paredes contam a sua história, esse templo 
                         pertencia aos Druidas e servia para a manutenção e equilibrio da floresta em volta dele. Chegando mais perto do salão principal você sente o cheiro de putrefação ainda mais 
                         forte, na antesala nota-se um corpo semi-devorado de um animal e logo em seguida um Urso Corrompido, você deseja enfrenta-lo {nome_player}? """,0.048)
-                        resposta = input('> ').upper()
-                        if resposta in ['SIM','S']:
-                            print_slow(f"""4.2 Matando o Urso, o caminho para a sala principal está aberto e você já presume do que está adiante é um dos Generais de Dreadmo'or. {nome_player} deseja
-                                        enfrenta-lo?""",0.048)
-                    else:
-                        print_slow(f"""5. Quanto mais próximo da Fortaleza do Desespero, você percebe um estado de putrefação avançado na floresta no qual a transformou num grande pântano. O cheiro era
+        
+            resposta = input('Continuar? [S/N] ').upper()
+            while resposta not in 'SN':
+                resposta = input('Continuar? [S/N] ').upper()
+            
+            if resposta == 'S':
+                print_slow(f"""Matando o Urso, o caminho para a sala principal está aberto e você já presume do que está adiante é um dos Generais de Dreadmo'or. {nome_player} deseja
+                enfrenta-lo?""",0.048)
+        
+        print_slow(f"""Quanto mais próximo da Fortaleza do Desespero, você percebe um estado de putrefação avançado na floresta no qual a transformou num grande pântano. O cheiro era
                         insuportável, você não via a hora de sair daquele lugar insalubre, derrepente você nota um vulto passandos entre as árvores, e pergunta a si mesmo que tipo de ser viveria naquelas
                         condições, {nome_player} deseja seguir o vulto? """,0.048)
-                        resposta = input('> ').upper()
-                        if resposta in ['SIM','S']:
-                            print_slow(f"""5.1 Com curiosidade você vai em busca da resposta e seguindo adiante encontra uma cabana cheia de limo e fungos pelas paredes, aparentemente a porta se encontrava
+        
+        resposta = input('Continuar? [S/N] ').upper()    
+        while resposta not in 'SN':
+            resposta = input('Continuar? [S/N] ').upper()
+        
+        if resposta == 'S':
+            print_slow(f"""5.1 Com curiosidade você vai em busca da resposta e seguindo adiante encontra uma cabana cheia de limo e fungos pelas paredes, aparentemente a porta se encontrava
                             meio aberta e você não hesita em entrar nessa cabana. Com um relanse de olhar você já sabia qual criatura vivia ali, com caldeirões e restos mortais de animais, era óbivio ser
                             um covil de uma Bruxa. Quando já estava pronto para partir, tarde demais! {nome_player}, PREPARE-SE""",0.048)
     #CAVALEIRO DA MORTE - FIM DA FLORESTA
-    
-        else:
-            print('A cordilheira está interditada no momento.')
-            break
+        
+        print('Fim de jogo.')  
+            
+    else:
+        print('6.0')
+        
+        resposta = input('Continuar? [S/N] ').upper()    
+        while resposta not in 'SN':
+            resposta = input('Continuar? [S/N] ').upper()
+        
+        if resposta == 'S':
+            print('6.1')
+        
+            resposta = input('Continuar? [S/N] ').upper()
+            while resposta not in 'SN':
+                resposta = input('Continuar? [S/N] ').upper()
+            
+            if resposta == 'S':
+                print('6.2')
+
+        print('7.0')
+        
+        resposta = input('Continuar? [S/N] ').upper()    
+        while resposta not in 'SN':
+            resposta = input('Continuar? [S/N] ').upper()
+        
+        if resposta == 'S':
+            print('3.1')
+        
+        print('8.0')
+        
+        resposta = input('Continuar? [S/N] ').upper()    
+        while resposta not in 'SN':
+            resposta = input('Continuar? [S/N] ').upper()
+        
+        if resposta == 'S':
+            print('8.1')
+        
+            resposta = input('Continuar? [S/N] ').upper()
+            while resposta not in 'SN':
+                resposta = input('Continuar? [S/N] ').upper()
+            
+            if resposta == 'S':
+                print('8.2')
+        
+        print('9.0')
+        
+        resposta = input('Continuar? [S/N] ').upper()    
+        while resposta not in 'SN':
+            resposta = input('Continuar? [S/N] ').upper()
+        
+        if resposta == 'S':
+            print('9.1')
+        
+        print('Fim de jogo.')
+
+
 
 
 
