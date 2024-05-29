@@ -140,7 +140,7 @@ def historia():
             resposta = input('Continuar? [S/N] ').upper()
         
         if resposta == 'S':
-            print_slow(f"""Você pede a Galatea que fique em segurança for invertigar o barulho, após um exploração rápida você encontra alguns mortos-vivos.{nome_player}deseja 
+            print_slow(f"""Você pede a Galatea que fique em segurança for invertigar o barulho, após um exploração rápida você encontra alguns mortos-vivos. {nome_player}deseja 
             enfrenta-los?""",0.048)
         
             resposta = input('Continuar? [S/N] ').upper()
