@@ -194,7 +194,7 @@ def historia():
             resposta = input('Continuar? [S/N] ').upper()
         
         if resposta == 'S':
-            print_slow(f"""5.1 Com curiosidade você vai em busca da resposta e seguindo adiante encontra uma cabana cheia de limo e fungos pelas paredes, aparentemente a porta se encontrava
+            print_slow(f"""Com curiosidade você vai em busca da resposta e seguindo adiante encontra uma cabana cheia de limo e fungos pelas paredes, aparentemente a porta se encontrava
                             meio aberta e você não hesita em entrar nessa cabana. Com um relanse de olhar você já sabia qual criatura vivia ali, com caldeirões e restos mortais de animais, era óbivio ser
                             um covil de uma Bruxa. Quando já estava pronto para partir, tarde demais! {nome_player}, PREPARE-SE""",0.048)
     #CAVALEIRO DA MORTE - FIM DA FLORESTA
