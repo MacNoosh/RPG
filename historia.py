@@ -130,8 +130,8 @@ def historia():
             um deles foi almadioçoada com um pedaço da alma do cavaleiro da morte, cabe a vocês dois enfraquece-lo ainda mais para obter mais chances de sucesso. Depois de um breve aceno,
             o Galadran o encoraja dizendo " {nome_player} chegando primeiro na Fortaleza, me espere!".
 
-            Saindo pelo portão norte você se direciona para a Floresta dos Susurros Antigos, nela você é recepcionado por um dríade chamada Galatea e explica que trantanto a floresta como
-            merece, a floresta te recompensará com proteção. Acantha pede uma escolta até um cemtiério do seu antigo povo, você a escuta e aceita seu pedido.
+            Saindo pelo portão norte você se direciona para a Floresta dos Susurros Antigos, nela você é recepcionado por um dríade chamada Galatea e explica que trantando a floresta como
+            merece, ela te recompensará com proteção. Acantha pede uma escolta até um cemtiério do seu antigo povo, você a escuta e aceita seu pedido.
 
             Seguindo pela estrada principal, vocês encotram o cemitério que Galatea havia mencionado. Você escuta um barulho estranho vindo das das catacumbas. 
             {nome_player} deseja investigar?""",0.048)
@@ -203,55 +203,81 @@ def historia():
         print('Fim de jogo.')  
             
     else:
-        print('6.0')
-        
-        resposta = input('Continuar? [S/N] ').upper()    
-        while resposta not in 'SN':
-            resposta = input('Continuar? [S/N] ').upper()
-        
-        if resposta == 'S':
-            print('6.1')
-        
-            resposta = input('Continuar? [S/N] ').upper()
-            while resposta not in 'SN':
-                resposta = input('Continuar? [S/N] ').upper()
-            
-            if resposta == 'S':
-                print('6.2')
+        print_slow(f"""Logo após a sua escolha do seu destino, o mago fala que irá pela Floresta dos Susurros Antigos, que cada caminho há pelo menos 2 Generais de Dreadmo'or e que cada 
+            um deles foi almadioçoada com um pedaço da alma do cavaleiro da morte, cabe a vocês dois enfraquece-lo ainda mais para obter mais chances de sucesso. Depois de um breve aceno,
+            o Galadran o encoraja dizendo " {nome_player} chegando primeiro na Fortaleza, me espere!".
 
-        print('7.0')
+            Saindo pelo portão norte você se direciona para a Cordilheira das chamas devoradoras, nela você é recepcionado por um anão chamado Grimgar e explica que desbravar a cordilheira
+            com a devida honra, ela te recompensará com poder. Grimgar pede uma ajuda até um mina, que num passado recente, era do seu povo. Você, até então, decide apenas acompanha-lo.
+
+            Seguindo pela trilha principal, vocês encotram a mina que Grimgar havia mencionado. Deseja ajudar Grimgar?
+        """,0.048)
         
         resposta = input('Continuar? [S/N] ').upper()    
         while resposta not in 'SN':
             resposta = input('Continuar? [S/N] ').upper()
         
         if resposta == 'S':
-            print('3.1')
-        
-        print('8.0')
-        
-        resposta = input('Continuar? [S/N] ').upper()    
-        while resposta not in 'SN':
-            resposta = input('Continuar? [S/N] ').upper()
-        
-        if resposta == 'S':
-            print('8.1')
+            print_slow(f"""Ao adentrar na mina escuta-se um barulho, chegando mais perto você percebe que é um grupo de orcs minerando. Deseja enfreta-los?
+        """,0.048)
         
             resposta = input('Continuar? [S/N] ').upper()
             while resposta not in 'SN':
                 resposta = input('Continuar? [S/N] ').upper()
             
             if resposta == 'S':
-                print('8.2')
-        
-        print('9.0')
+                print_slow(f"""Após derrotar os orcs um deles ainda fica vivo, após interroga-lo é revelado o que lhe espera adiante, um dos generais de Dreadmo'or, Zorgrak o Orgro.
+                Deseja enfrenta-lo?
+                """,0.048)
+
+        print_slow(f"""Após deixar a mina você continua pela trilha da montanha por algumas noites, depois de alguns dias em um pedaço você nota um construção misteirosa. Deseja 
+                   investigar?
+                """,0.048)
         
         resposta = input('Continuar? [S/N] ').upper()    
         while resposta not in 'SN':
             resposta = input('Continuar? [S/N] ').upper()
         
         if resposta == 'S':
-            print('9.1')
+            print_slow(f"""Chegando mais perto você percebe que a construção nada mais era que um ninho de harpia. Prepare-se {nome_player}!
+                """,0.048)
+        
+        print_slow(f"""Subindo ainda mais você chega no vilarejo Lume da Montanha, a população local parece surpresa com sua presença. Conversando com os locais eles falam que as visitas
+            diminuiram consideravelmente devido ao aumento de ataque de monstros no vilarejo e que gerealmente eles acontecem a noite. Você deseja passar a noite {nome_player}?""",0.048)
+        
+        resposta = input('Continuar? [S/N] ').upper()    
+        while resposta not in 'SN':
+            resposta = input('Continuar? [S/N] ').upper()
+        
+        if resposta == 'S':
+            print_slow(f"""No meio da noite você acorda com grunidos, após olhar pela janela da pousada dois javalis da montanha estão atacando a cidade, deseja ajudar {nome_player}?
+                       """,0.048)
+        
+            resposta = input('Continuar? [S/N] ').upper()
+            while resposta not in 'SN':
+                resposta = input('Continuar? [S/N] ').upper()
+            
+            if resposta == 'S':
+                print_slow(f"""Depois de aniquilar os dois javalis você pede mais informações sobre o que exatamente está acontecendo, um dos moradores que tinha mais conhecimento fala
+                           que depois que sombras transformaram dia em noite no vilarejo as criaturas que tinham seu habitat um ponto mais alto perto do vilarejo começaram a aparecer.
+                           Então você decide investigar, chegando perto do local aonde os javalis ficavam você sente um cheiro de putrefação e logo percebe o porque, haviam vários cadáveres
+                           a maioria todos comidos, indo mais além, você encontra o motivo de tudo. Era um dos generais de Dreadmo'or, o dragão Typhorix. Prepare-se {nome_player}!
+                       """,0.048)
+        
+        
+        print_slow(f"""Descendo a cordilheira rumo a Fortaleza do Desespero você nota que a natureza está fora do seu equilibrio, vulcões com atividade além do normal fazendo surgir rios de
+                   lava, o que tornava a caminhada ainda mais difícil. Algum tempo depois você sente tremores estranhos vindo da sua esquerda mesclado com alguns gritos. Deseja investigar
+                   {nome_player}?
+                       """,0.048)
+        
+        resposta = input('Continuar? [S/N] ').upper()    
+        while resposta not in 'SN':
+            resposta = input('Continuar? [S/N] ').upper()
+        
+        if resposta == 'S':
+            print_slow(f"""Chegando ao epicentro dos tremores e ondem haviam os gritos percebe-se o que restou de alguns centauros que acabam de lutar com um gigante de lava, antes de você
+                       percerber já tinha sido notado. Prepare-se {nome_player}!
+                       """,0.048)
         
         print('Fim de jogo.')
 
