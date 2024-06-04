@@ -194,15 +194,16 @@ def atacar(tempo_acao, inimigo, dano):
     global vida_player
     frases = ['Você vê uma abertura. É sua vez de atacar! ',f'O {inimigo} está vulnerável! Aproveite sua chance! ', 'Você sente a adrenalina. Qual é sua ação? ', 'Agora é com você! Prepare-se para atacar: ']
     errou = [f'Infelizmente, seu ataque não encontra o {inimigo}.', f'Seu ataque falha, deixando o {inimigo} ileso.', f'Apesar de seus esforços, você não consegue acertar o {inimigo}.', f'Seu golpe passa raspando, mas não acerta o {inimigo}.']
-    demorou = [f'Você hesita por um momento e perde sua oportunidade de agir. O que permitiu que o {inimigo} lhe golpeasse, causando ', f'Sua hesitação permite ao {inimigo} agir antes de você, e lhe causar', f'Sua indecisão custa caro, e o {inimigo} aproveita a chance, caunsando ']
+    demorou = [f'Você hesita por um momento e perde sua oportunidade de agir. O que permitiu que o {inimigo} lhe golpeasse, causando ', f'Sua hesitação permite ao {inimigo} agir antes de você, e lhe causar', f'Sua indecisão custa caro, e o {inimigo} aproveita a chance, causando ']
     tempo_inicial = time.time()
-    acao = input(random.choice(frases))
+    print_slow(random.choice(frases),0.02)
+    acao = input('')
     
     while True:
         tempo_final = time.time() - tempo_inicial
-        print(tempo_final)
+
         if tempo_acao <= tempo_final:
-            print(random.choice(demorou), f'{dano} de dano')
+            print_slow(random.choice(demorou), f'{dano} de dano',0.02)
             vida_player -= dano
             break
         
@@ -210,11 +211,11 @@ def atacar(tempo_acao, inimigo, dano):
             if acao in palavras_atk:
                 acerto = round(palavras_atk[acao] * 2 * (tempo_acao - tempo_final))
                 acertou = [f'Você desfere um {acao.upper()} certeiro!', f'Você desfere um {acao.upper()} devastador no {inimigo}!', f'Seu {acao.upper()} encontra {inimigo} com precisão!']
-                print(random.choice(acertou), f'causando {acerto} de dano')
+                print_slow(f'{random.choice(acertou)} causando {acerto} de dano',0.02)
                 vida_inimigo-=acerto
                 break
             elif acao not in palavras_atk:
-                print(random.choice(errou))
+                print_slow(random.choice(errou),0.02)
                 break
             
 def defender_2(tempo_acao, inimigo, dano):
@@ -229,7 +230,7 @@ def defender_2(tempo_acao, inimigo, dano):
               f'O {inimigo} faz um movimento agressivo em sua direção. Será necessário {defesa_exigida.upper()}',
               f'O {inimigo} lança um olhar de desafio em sua direção, pronto para testar sua {defesa_exigida.upper()}.',
               f'O som de passos pesados ecoa ao seu redor, anunciando a investida iminente do {inimigo}. É hora de mostrar sua {defesa_exigida.upper()}!']
-    print(random.choice(frases))
+    print_slow(random.choice(frases),0.02)
     
     defendeu = [f'Você antecipa os movimentos do {inimigo} com uma precisão impressionante, bloqueando seu ataque com um {defesa_exigida} rápido e eficaz!',
                 f'Você se move com uma graça surpreendente, desviando habilmente do ataque do {inimigo}. Sua {defesa_exigida} é impecável!']
@@ -243,7 +244,7 @@ def defender_2(tempo_acao, inimigo, dano):
         tempo_final = time.time() - tempo_inicial
         
         if tempo_final > tempo_acao:
-            print(random.choice(sofreu), f'Você recebeu {dano} de dano.')
+            print_slow(f'{random.choice(sofreu)} Você recebeu {dano} de dano.',0.02)
             vida_player-=dano
             break
 
@@ -256,13 +257,13 @@ def defender_2(tempo_acao, inimigo, dano):
         if palavra_digitada == defesa_exigida[:len(palavra_digitada)]:
             if palavra_digitada == defesa_exigida:
                 if defesa_exigida == 'contra-ataque':
-                    print(contra, f'Você causou {dano} de dano!')
+                    print_slow(f'{contra} Você causou {dano} de dano!',0.02)
                     vida_inimigo-=dano
                     break
                 else:
-                    print(random.choice(defendeu))
+                    print_slow(random.choice(defendeu),0.02)
                     break
         else:
-            print(random.choice(sofreu), f'Você recebeu {dano} de dano.')
+            print_slow(f'{random.choice(sofreu)} Você recebeu {dano} de dano.',0.02)
             vida_player-=dano
             break
