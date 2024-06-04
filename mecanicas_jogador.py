@@ -188,4 +188,81 @@ def desvio_animado(texto,tecla,tempo,emoji):
 
                 break
 
+# ultimas atualizações, é a que mais gostei até agora:
+def atacar(tempo_acao, inimigo, dano):
+    global vida_inimigo
+    global vida_player
+    frases = ['Você vê uma abertura. É sua vez de atacar! ',f'O {inimigo} está vulnerável! Aproveite sua chance! ', 'Você sente a adrenalina. Qual é sua ação? ', 'Agora é com você! Prepare-se para atacar: ']
+    errou = [f'Infelizmente, seu ataque não encontra o {inimigo}.', f'Seu ataque falha, deixando o {inimigo} ileso.', f'Apesar de seus esforços, você não consegue acertar o {inimigo}.', f'Seu golpe passa raspando, mas não acerta o {inimigo}.']
+    demorou = [f'Você hesita por um momento e perde sua oportunidade de agir. O que permitiu que o {inimigo} lhe golpeasse, causando ', f'Sua hesitação permite ao {inimigo} agir antes de você, e lhe causar', f'Sua indecisão custa caro, e o {inimigo} aproveita a chance, caunsando ']
+    tempo_inicial = time.time()
+    acao = input(random.choice(frases))
+    
+    while True:
+        tempo_final = time.time() - tempo_inicial
+        print(tempo_final)
+        if tempo_acao <= tempo_final:
+            print(random.choice(demorou), f'{dano} de dano')
+            vida_player -= dano
+            break
+        
+        else:
+            if acao in palavras_atk:
+                acerto = round(palavras_atk[acao] * 2 * (tempo_acao - tempo_final))
+                acertou = [f'Você desfere um {acao.upper()} certeiro!', f'Você desfere um {acao.upper()} devastador no {inimigo}!', f'Seu {acao.upper()} encontra {inimigo} com precisão!']
+                print(random.choice(acertou), f'causando {acerto} de dano')
+                vida_inimigo-=acerto
+                break
+            elif acao not in palavras_atk:
+                print(random.choice(errou))
+                break
+            
+def defender_2(tempo_acao, inimigo, dano):
+    global vida_inimigo
+    global vida_player
+    tempo_inicial = time.time()    
+    
+    defesa_exigida = random.choice(list(palavras_dfs_player.values()))
+    palavra_digitada = ''
+    
+    frases = [f'Seus instintos alertam você sobre o ataque iminente do {inimigo}. Rápido! Use: {defesa_exigida.upper()}', 
+              f'O {inimigo} faz um movimento agressivo em sua direção. Será necessário {defesa_exigida.upper()}',
+              f'O {inimigo} lança um olhar de desafio em sua direção, pronto para testar sua {defesa_exigida.upper()}.',
+              f'O som de passos pesados ecoa ao seu redor, anunciando a investida iminente do {inimigo}. É hora de mostrar sua {defesa_exigida.upper()}!']
+    print(random.choice(frases))
+    
+    defendeu = [f'Você antecipa os movimentos do {inimigo} com uma precisão impressionante, bloqueando seu ataque com um {defesa_exigida} rápido e eficaz!',
+                f'Você se move com uma graça surpreendente, desviando habilmente do ataque do {inimigo}. Sua {defesa_exigida} é impecável!']
+    contra = f'Com um movimento fluído, você desvia o ataque do {inimigo}, transformando seu ímpeto ofensivo em uma oportunidade de contra-ataque. Sua defesa não só protege, mas também surpreende!'
+    
+    sofreu = [f'O golpe do {inimigo} encontra seu caminho através de suas defesas, deixando uma sensação de impacto brutal em seu corpo.',
+              f'Você é pego desprevenido pelo ataque do {inimigo}, que encontra sua brecha.',
+              f'Você se vê cercado pela dor do ataque do {inimigo}, que parece encontrar uma fraqueza em suas defesas e explorá-la ao máximo.']
+    
+    while True:
+        tempo_final = time.time() - tempo_inicial
+        
+        if tempo_final > tempo_acao:
+            print(random.choice(sofreu), f'Você recebeu {dano} de dano.')
+            vida_player-=dano
+            break
 
+        tecla = keyboard.read_event()
+        if tecla.event_type == keyboard.KEY_DOWN and tecla.name in 'abcdefghijlmnopqrstuvxzkwyãê~^-':
+            digitacao = tecla.name
+            palavra_digitada += digitacao
+            print(digitacao, end = '', flush=True)
+
+        if palavra_digitada == defesa_exigida[:len(palavra_digitada)]:
+            if palavra_digitada == defesa_exigida:
+                if defesa_exigida == 'contra-ataque':
+                    print(contra, f'Você causou {dano} de dano!')
+                    vida_inimigo-=dano
+                    break
+                else:
+                    print(random.choice(defendeu))
+                    break
+        else:
+            print(random.choice(sofreu), f'Você recebeu {dano} de dano.')
+            vida_player-=dano
+            break

@@ -53,7 +53,10 @@ def historia():
 
     tenebris - cavaleiro da morte local
     '''
-
+    palavras_atk = {'corte': 1}
+    palavras_dfs_totais = {'corte': 'resistencia', 'impacto': 'proteçao', 'estocada': 'esquiva', 'arremesso': 'bloqueio', 'rompimento': 'finta', 'esmagamento': 'contra-ataque'}
+    palavras_dfs_player = {}
+    
 
     print_slow("""
     Depois anos de lealdade e serviço ao seu reino, o cavaleiro Bravmo'or enfrentou uma traição devastadora que o levou a uma jornada sombria, consumido pela dor e pela escuridão, 
