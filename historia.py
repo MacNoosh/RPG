@@ -7,57 +7,6 @@ import random
 
 
 def historia():
-    ''' Roteiro elder string
-
-    Depois anos de lealdade e serviço ao seu reino, o cavaleiro enfrentou uma traição devastadora que o levou a 
-    uma jornada sombria. Consumido pela dor e pela escuridão, ele se entregou ao poder da morte em busca de 
-    vingança. Como cavaleiro da morte, ele ceifou vidas sem propósito, perdido em um ciclo de destruição.
-    Seu desejo de transformar a terra em um mundo das trevas o consumiu, espalhando desespero e destruição 
-    por onde passava. Seu nome tornou-se sinônimo de medo e terror, enquanto ele mergulhava o mundo em um abismo 
-    de desolação.
-    Apesar dos lampejos de humanidade que ainda ecoavam dentro dele, o cavaleiro continuou em sua cruzada sombria,
-    cada vez mais mergulhado na escuridão. Seus atos de crueldade e opressão tornaram-se ainda mais brutais, 
-    alimentando-se do poder que ele tanto desejava.
-
-    2 finais – 
-
-    Bom, matando o cavaleiro da morte. (Conversa antes do boss, selecionando a opção correta e apelando pela
-    humanidade, ele torna-se consciente e morre com 40% da vida se não, morre com 100%)
-
-    Ruim, você perde ou ganha? (dependendo das suas opções durante a sua jornada você pode derrota-lo e se tornar 
-    o novo cavaleiro da morte.)
-
-    História por trás do personagem –
-    Você é um atual cavaleiro do reino do que restou dos poucos impérios sobreviventes da tirania do cavaleiro da 
-    morte. Através de um ultimato, apenas restando uma chance, sai em busca de uma jornada para buscar as elder
-    {str}ings, as palavras de sabedoria, para ampliar a chance da derroca do reinado do cavaleiro da morte.
-
-    {str}ing – Após a caminhada até o boss, dependendo do caminho e suas ações, você achara strings especificas 
-    para facilitar na hora do boss ou até tomar o poder dele para você.
-    Ações –
-    Acumular pontos de maldade e bondade, dependendo do número no final do jogo você recebera a palavra pra
-    derrotar ou tomar o poder.
-
-
-    Combate –
-
-    Multiplicar do dano é o tempo da pessoa digitar (Pedro), removendo os direcionais.
-
-    Quanto mais tempo ele demorar pra escrever, mais dano ele toma.
-
-    Classes –
-    Desnecessário, porém se sobrar tempo talvez dê para colocar.
-
-    Itens –
-    Apenas item de ataque e defesa (espada e armadura), adiciona o dano que você daria ao boss.
-
-    tenebris - cavaleiro da morte local
-    '''
-    palavras_atk = {'corte': 1}
-    palavras_dfs_totais = {'corte': 'resistencia', 'impacto': 'proteçao', 'estocada': 'esquiva', 'arremesso': 'bloqueio', 'rompimento': 'finta', 'esmagamento': 'contra-ataque'}
-    palavras_dfs_player = {}
-    
-
     print_slow("""
     Depois anos de lealdade e serviço ao seu reino, o cavaleiro Bravmo'or enfrentou uma traição devastadora que o levou a uma jornada sombria, consumido pela dor e pela escuridão, 
     ele se entregou ao poder da morte em busca de vingança. Como cavaleiro da morte, ele ceifou vidas sem propósito, perdido em um ciclo de destruição.Seu desejo de transformar a 
@@ -69,10 +18,8 @@ def historia():
     os acontecimentos que culminaram para essa situação, nesse momento você sente cheiro de sangue... você se distraiu na hora do treinamento, REAJA!
                DIGITE CORTE PARA ATACAR / FINTA PRA DEFENDER / DIRECIONAIS PARA DESVIAR""",0.048)
 
-    palavras_atk = [{'palavra': 'corte', 'dano': 1}]
-    tutorial_desvio(3)
-   
-    
+    #tutorial_desvio(3)
+      
 
     print_slow("""Após o treinamento, o esquadrão de batedores do reino trazem péssimas notícias, um dos exército de Dreadmo'or marcha para atacar um dos poucos bastiões que sobraram 
     no mundo, a cidade de LUMINARA. O rei, Leothan "O Dourado", rapidamente convoca seus generais, recrutando todos os guardas reais da cidade. 
@@ -91,7 +38,7 @@ def historia():
     Que a tua alma seja banhada por essa luz divina, lembrando-te de que a esperança é a palavra que nunca se apaga.". Após as palavras da desconhecida, você 
     volta a vida no campo de batalha, ensanguentado e com pouca força vital, algo dentro de você grita!!!""",0.048)
 
-    esperança(3)
+    #esperança(3)
 
     print_slow(""" Você tenta gritar algo mas apenas sai um gemido inaudível. Quase desmaindo novamente você ainda consegue acompanhar o que vinha a seguir na batalha, por algum motivo, depois 
         da sua ressureição, Dreadmo'or parecia enfraquecido. Galadran Sussurroestelar emerge, e em um dialeto estranho, fala algo sonoramente parecido com sagrado. Após a fala de Galadran
@@ -103,6 +50,9 @@ def historia():
     
     nome_player = input('Você se lembra do seu nome, jovem guarda?')
     nome_do_jogo = 'Elder {Str}ing'
+    global vida_player
+    global vida_inimigo
+    
 
     print_slow(f""" Você tenta lembrar do seu nome, e com um pouco de dificuldade você fala {nome_player}. Depois de sua consciência voltar ao normal, você pouco a pouco lembra de todo
     desenrolar da batalha. O senhor de barba e cabelos grisalhos era nada mais que Galadran. O mago do reino então curioso lhe faz uma pergunta: " {nome_player}, você viu o sol? sentiu
@@ -150,11 +100,15 @@ def historia():
             resposta = input('Continuar? [S/N] ').upper()
             while resposta not in 'SN':
                 resposta = input('Continuar? [S/N] ').upper()
-            
-            if resposta == 'S':
-                print_slow(f"""Após derrotar o grupo de mortos-vivos, você percebe que na verdade eles foram invocados por alguma coisa. Adentrando nas partes mais profundas da catacumbas 
-                você sente um poder sombrio, com cautela você se aproxima e se vê diante de um dos Generais de Dreadmo'or, Necroth o Senhor da Sepultura. {nome_player} deseja enfrenta-lo?""",0.048)
 
+            if resposta == 'S':
+                batalha_comum('Mortos-Vivos',10,4,5)
+                aprendizado('impacto',3)
+                print_slow(f"""Após derrotar o grupo de mortos-vivos, seu codex aprendeu uma nova palavra: IMPACTO. Você percebe que na verdade os mortos-vivos foram invocados por alguma coisa. Adentrando nas partes mais profundas da catacumbas 
+                você sente um poder sombrio, com cautela você se aproxima e se vê diante de um dos Generais de Dreadmo'or, Necroth o Senhor da Sepultura. {nome_player} PREPARE-SE""",0.048)
+                batalha_comum('Necroth',15,3,4) # mudar para batalha_miniboss
+                
+                
         print_slow(f"""Continuando pela estrada da floresta você chega a cidade élfica de Thalassëa, após uma rápida verificação nos portões, o acesso a cidade é liberado. Um clima de
                 desconfiança paira sobre a cidade. Conversando com os comerciantes, você descobre que há relatos de furtos e como os elfos estão fazendo frente contra o exército do cavaleiro da
                 morte os ladrões se aproveitam da impunidade. Após a explicação os comerciante suplicam por ajuda, {nome_player} dejesa ajuda-los?

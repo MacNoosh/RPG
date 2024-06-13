@@ -37,8 +37,8 @@ def contador(texto,fim,textofinal):
         time.sleep(1)
     print(textofinal)
 
-def aprendizado(palavra, dano):
-    palavras_atk[palavra] = dano
-    for key in palavras_dfs_totais:
-        if key in palavras_atk:
-            palavras_dfs_player[key] = palavras_dfs_totais[key]
+
+
+def limpa_linha():
+    for _ in range(100):
+        keyboard.press_and_release('backspace')
