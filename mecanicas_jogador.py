@@ -321,7 +321,6 @@ def batalha_comum(inimigo,dano, tempo_atk, tempo_dfs):
         
         if vida_inimigo <= 0:
             print('venceu. ir pra próxima.')
-            vida_player = vida_inimigo = 30  
             break   
         
     

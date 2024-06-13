@@ -1,5 +1,6 @@
 from funcoes import *
 from mecanicas_jogador import *
+import mecanicas_jogador
 import time
 import keyboard
 import random
@@ -50,8 +51,6 @@ def historia():
     
     nome_player = input('Você se lembra do seu nome, jovem guarda?')
     nome_do_jogo = 'Elder {Str}ing'
-    global vida_player
-    global vida_inimigo
     
 
     print_slow(f""" Você tenta lembrar do seu nome, e com um pouco de dificuldade você fala {nome_player}. Depois de sua consciência voltar ao normal, você pouco a pouco lembra de todo
@@ -97,16 +96,27 @@ def historia():
             print_slow(f"""Você pede a Galatea que fique em segurança for invertigar o barulho, após um exploração rápida você encontra alguns mortos-vivos. {nome_player}deseja 
             enfrenta-los?""",0.048)
         
-            resposta = input('Continuar? [S/N] ').upper()
-            while resposta not in 'SN':
-                resposta = input('Continuar? [S/N] ').upper()
+            resposta = input('Continuar? [S/N] (Digite Codex para ver sua lista de ataques.) ').upper()
+            while True:
+                if resposta == 'CODEX':
+                    for palavra in palavras_atk.keys():
+                        print(palavra, end = ' | ')      
+                    resposta = input(f'\nContinuar? [S/N] (Digite codex para ver sua lista de ataques.) ').upper()
+                if resposta in 'SN':
+                    break
 
             if resposta == 'S':
-                batalha_comum('Mortos-Vivos',10,4,5)
+                mecanicas_jogador.vida_player = 30
+                mecanicas_jogador.vida_inimigo = 30
+                
+                batalha_comum('Mortos-Vivos',8,5,6)
                 aprendizado('impacto',3)
+                
                 print_slow(f"""Após derrotar o grupo de mortos-vivos, seu codex aprendeu uma nova palavra: IMPACTO. Você percebe que na verdade os mortos-vivos foram invocados por alguma coisa. Adentrando nas partes mais profundas da catacumbas 
                 você sente um poder sombrio, com cautela você se aproxima e se vê diante de um dos Generais de Dreadmo'or, Necroth o Senhor da Sepultura. {nome_player} PREPARE-SE""",0.048)
-                batalha_comum('Necroth',15,3,4) # mudar para batalha_miniboss
+                mecanicas_jogador.vida_player = 35
+                mecanicas_jogador.vida_inimigo = 50
+                batalha_comum('Necroth',9,4,5) # mudar para batalha_miniboss
                 
                 
         print_slow(f"""Continuando pela estrada da floresta você chega a cidade élfica de Thalassëa, após uma rápida verificação nos portões, o acesso a cidade é liberado. Um clima de
@@ -114,47 +124,85 @@ def historia():
                 morte os ladrões se aproveitam da impunidade. Após a explicação os comerciante suplicam por ajuda, {nome_player} dejesa ajuda-los?
                 """,0.048)
         
-        resposta = input('Continuar? [S/N] ').upper()    
-        while resposta not in 'SN':
-            resposta = input('Continuar? [S/N] ').upper()
+        resposta = input('Continuar? [S/N] (Digite Codex para ver sua lista de ataques.) ').upper()
+        while True:
+            if resposta == 'CODEX':
+                for palavra in palavras_atk.keys():
+                    print(palavra, end = ' | ')      
+                resposta = input(f'\nContinuar? [S/N] (Digite codex para ver sua lista de ataques.) ').upper()
+            if resposta in 'SN':
+                break
         
         if resposta == 'S':
             print_slow(f"""Pegando informações nos suburbios da cidade você toma ciência que o grupo de ladrões encontram-se dentro de uma caverna aos arredores da cidade, entrando na 
                     caverna você se depara com um grupo de 4 ladrões, PREPARE-SE!""",0.048)
+            mecanicas_jogador.vida_player = 45
+            mecanicas_jogador.vida_inimigo = 50
+            batalha_comum('Bandidos',10,5,6)
+            aprendizado('estocada',4)
         
         print_slow(f"""Saindo da cidade de Thalassëa, prosseguindo por mais alguns dias, você se depara com um templo antigo. Aproximando-se um pouco mais percebe que há um tabuleta
                     de mármore que tinha gravado em si a seguinte frase: "Santuário da Eterna Renovação". Um pouco contraditório, já que você percebe que ao redor do templo há muita vegetação em 
                     estado de putrefação. Você deseja adentrar no templo, {nome_player}?""",0.048)
         
-        resposta = input('Continuar? [S/N] ').upper()    
-        while resposta not in 'SN':
-            resposta = input('Continuar? [S/N] ').upper()
+        resposta = input('Continuar? [S/N] (Digite Codex para ver sua lista de ataques.) ').upper()
+        while True:
+            if resposta == 'CODEX':
+                for palavra in palavras_atk.keys():
+                    print(palavra, end = ' | ')      
+                resposta = input(f'\nContinuar? [S/N] (Digite codex para ver sua lista de ataques.) ').upper()
+            if resposta in 'SN':
+                break
         
         if resposta == 'S':
             print_slow(f"""Aos poucos você vai se aprofundando dentro do templo e começa a entender a quem um dia pertenceu, as próprias paredes contam a sua história, esse templo 
                         pertencia aos Druidas e servia para a manutenção e equilibrio da floresta em volta dele. Chegando mais perto do salão principal você sente o cheiro de putrefação ainda mais 
                         forte, na antesala nota-se um corpo semi-devorado de um animal e logo em seguida um Urso Corrompido, você deseja enfrenta-lo {nome_player}? """,0.048)
         
-            resposta = input('Continuar? [S/N] ').upper()
-            while resposta not in 'SN':
-                resposta = input('Continuar? [S/N] ').upper()
+            resposta = input('Continuar? [S/N] (Digite Codex para ver sua lista de ataques.) ').upper()
+            while True:
+                if resposta == 'CODEX':
+                    for palavra in palavras_atk.keys():
+                        print(palavra, end = ' | ')      
+                    resposta = input(f'\nContinuar? [S/N] (Digite codex para ver sua lista de ataques.) ').upper()
+                if resposta in 'SN':
+                    break
             
             if resposta == 'S':
-                print_slow(f"""Matando o Urso, o caminho para a sala principal está aberto e você já presume do que está adiante é um dos Generais de Dreadmo'or. {nome_player} deseja
-                enfrenta-lo?""",0.048)
+                mecanicas_jogador.vida_player = 50
+                mecanicas_jogador.vida_inimigo = 50
+                batalha_comum('Urso Corrompido',12,5,6)
+                print_slow(f"""Matando o Urso, o caminho para a sala principal está aberto e você já presume do que está adiante é um dos Generais de Dreadmo'or. {nome_player}, prepare-se!""",0.048)
+                aprendizado('arremesso',5)
+                
+                
+                mecanicas_jogador.vida_player = 55
+                mecanicas_jogador.vida_inimigo = 70
+                batalha_comum('General',15,4,5) # mudar para miniboss
+                aprendizado('esmagamento',7)
         
         print_slow(f"""Quanto mais próximo da Fortaleza do Desespero, você percebe um estado de putrefação avançado na floresta no qual a transformou num grande pântano. O cheiro era
                         insuportável, você não via a hora de sair daquele lugar insalubre, derrepente você nota um vulto passandos entre as árvores, e pergunta a si mesmo que tipo de ser viveria naquelas
                         condições, {nome_player} deseja seguir o vulto? """,0.048)
         
-        resposta = input('Continuar? [S/N] ').upper()    
-        while resposta not in 'SN':
-            resposta = input('Continuar? [S/N] ').upper()
+        resposta = input('Continuar? [S/N] (Digite Codex para ver sua lista de ataques.) ').upper()
+        while True:
+            if resposta == 'CODEX':
+                for palavra in palavras_atk.keys():
+                    print(palavra, end = ' | ')      
+                resposta = input(f'\nContinuar? [S/N] (Digite codex para ver sua lista de ataques.) ').upper()
+            if resposta in 'SN':
+                break
         
         if resposta == 'S':
             print_slow(f"""Com curiosidade você vai em busca da resposta e seguindo adiante encontra uma cabana cheia de limo e fungos pelas paredes, aparentemente a porta se encontrava
                             meio aberta e você não hesita em entrar nessa cabana. Com um relanse de olhar você já sabia qual criatura vivia ali, com caldeirões e restos mortais de animais, era óbivio ser
                             um covil de uma Bruxa. Quando já estava pronto para partir, tarde demais! {nome_player}, PREPARE-SE""",0.048)
+        mecanicas_jogador.vida_player = 60
+        mecanicas_jogador.vida_inimigo = 50
+        batalha_comum('Bruxa',18,3.5,4)
+        aprendizado('rompimento',6)    
+            
     #CAVALEIRO DA MORTE - FIM DA FLORESTA
         
         print('Fim de jogo.')  
@@ -191,9 +239,14 @@ def historia():
                    investigar?
                 """,0.048)
         
-        resposta = input('Continuar? [S/N] ').upper()    
-        while resposta not in 'SN':
-            resposta = input('Continuar? [S/N] ').upper()
+        resposta = input('Continuar? [S/N] (Digite Codex para ver sua lista de ataques.) ').upper()
+        while True:
+            if resposta == 'CODEX':
+                for palavra in palavras_atk.keys():
+                    print(palavra, end = ' | ')      
+                resposta = input(f'\nContinuar? [S/N] (Digite codex para ver sua lista de ataques.) ').upper()
+            if resposta in 'SN':
+                break
         
         if resposta == 'S':
             print_slow(f"""Chegando mais perto você percebe que a construção nada mais era que um ninho de harpia. Prepare-se {nome_player}!
@@ -202,17 +255,27 @@ def historia():
         print_slow(f"""Subindo ainda mais você chega no vilarejo Lume da Montanha, a população local parece surpresa com sua presença. Conversando com os locais eles falam que as visitas
             diminuiram consideravelmente devido ao aumento de ataque de monstros no vilarejo e que gerealmente eles acontecem a noite. Você deseja passar a noite {nome_player}?""",0.048)
         
-        resposta = input('Continuar? [S/N] ').upper()    
-        while resposta not in 'SN':
-            resposta = input('Continuar? [S/N] ').upper()
+        resposta = input('Continuar? [S/N] (Digite Codex para ver sua lista de ataques.) ').upper()
+        while True:
+            if resposta == 'CODEX':
+                for palavra in palavras_atk.keys():
+                    print(palavra, end = ' | ')      
+                resposta = input(f'\nContinuar? [S/N] (Digite codex para ver sua lista de ataques.) ').upper()
+            if resposta in 'SN':
+                break
         
         if resposta == 'S':
             print_slow(f"""No meio da noite você acorda com grunidos, após olhar pela janela da pousada dois javalis da montanha estão atacando a cidade, deseja ajudar {nome_player}?
                        """,0.048)
         
-            resposta = input('Continuar? [S/N] ').upper()
-            while resposta not in 'SN':
-                resposta = input('Continuar? [S/N] ').upper()
+            resposta = input('Continuar? [S/N] (Digite Codex para ver sua lista de ataques.) ').upper()
+            while True:
+                if resposta == 'CODEX':
+                    for palavra in palavras_atk.keys():
+                        print(palavra, end = ' | ')      
+                    resposta = input(f'\nContinuar? [S/N] (Digite codex para ver sua lista de ataques.) ').upper()
+                if resposta in 'SN':
+                    break
             
             if resposta == 'S':
                 print_slow(f"""Depois de aniquilar os dois javalis você pede mais informações sobre o que exatamente está acontecendo, um dos moradores que tinha mais conhecimento fala
@@ -227,9 +290,14 @@ def historia():
                    {nome_player}?
                        """,0.048)
         
-        resposta = input('Continuar? [S/N] ').upper()    
-        while resposta not in 'SN':
-            resposta = input('Continuar? [S/N] ').upper()
+        resposta = input('Continuar? [S/N] (Digite Codex para ver sua lista de ataques.) ').upper()
+        while True:
+            if resposta == 'CODEX':
+                for palavra in palavras_atk.keys():
+                    print(palavra, end = ' | ')      
+                resposta = input(f'\nContinuar? [S/N] (Digite codex para ver sua lista de ataques.) ').upper()
+            if resposta in 'SN':
+                break
         
         if resposta == 'S':
             print_slow(f"""Chegando ao epicentro dos tremores e ondem haviam os gritos percebe-se o que restou de alguns centauros que acabam de lutar com um gigante de lava, antes de você
