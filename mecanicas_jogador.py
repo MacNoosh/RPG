@@ -4,8 +4,6 @@ from colorama import Fore, Back, Style, init
 from funcoes import *
 import random
 
-
-
 palavras_atk = {'corte': 2}
 palavras_dfs_totais = {'corte': 'resistencia', 'impacto': 'proteçao', 'estocada': 'esquiva', 'arremesso': 'bloqueio', 'rompimento': 'finta', 'esmagamento': 'contra-ataque'}
 palavras_dfs_player = {'corte': 'resistencia'}
@@ -323,4 +321,3 @@ def batalha_comum(inimigo,dano, tempo_atk, tempo_dfs):
             print('venceu. ir pra próxima.')
             break   
         
-    
