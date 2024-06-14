@@ -1,9 +1,8 @@
 import os
+import shutil
 import pygame
 import time
-import keyboard
 from colorama import init, Fore, Style
-from mecanicas_executar import executar_mecanicas
 from tutorial import tutorial_game
 from historia import *
 from funcoes import *
@@ -12,17 +11,25 @@ init(autoreset=True)
 
 pygame.mixer.init()
 
-            
 def tocar_musica():
-    pygame.mixer.music.load(r"C:\Elden{Str}ing\Cronus.mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
+    pygame.mixer.music.load(r"C:\Users\MacNoosh\Documents\GitHub\RPG\Cronus.mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
     pygame.mixer.music.play(-1)
 
 def tocar_musica_2():
-    pygame.mixer.music.load(r"C:\Elden{Str}ing\teste.mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
+    pygame.mixer.music.load(r"C:\Users\MacNoosh\Documents\GitHub\RPG\teste.mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
     pygame.mixer.music.play(-1)
 
+def centralizar_texto(texto):
+    largura_terminal = shutil.get_terminal_size().columns
+    linhas = texto.split('\n')
+    texto_centralizado = ''
+    for linha in linhas:
+        texto_centralizado += linha.center(largura_terminal) + '\n'
+    return texto_centralizado
+
 def tela_bem_vindo():
-            print_slow(f'''▓█████  ██▓    ▓█████▄ ▓█████  ███▄    █      ██████ ▄▄▄█████▓ ██▀███   ██▓ ███▄    █   ▄████ 
+    nome_jogo = '''
+▓█████  ██▓    ▓█████▄ ▓█████  ███▄    █      ██████ ▄▄▄█████▓ ██▀███   ██▓ ███▄    █   ▄████ 
 ▓█   ▀ ▓██▒    ▒██▀ ██▌▓█   ▀  ██ ▀█   █    ▒██    ▒ ▓  ██▒ ▓▒▓██ ▒ ██▒▓██▒ ██ ▀█   █  ██▒ ▀█▒
 ▒███   ▒██░    ░██   █▌▒███   ▓██  ▀█ ██▒   ░ ▓██▄   ▒ ▓██░ ▒░▓██ ░▄█ ▒▒██▒▓██  ▀█ ██▒▒██░▄▄▄░
 ▒▓█  ▄ ▒██░    ░▓█▄   ▌▒▓█  ▄ ▓██▒  ▐▌██▒     ▒   ██▒░ ▓██▓ ░ ▒██▀▀█▄  ░██░▓██▒  ▐▌██▒░▓█  ██▓
@@ -31,14 +38,10 @@ def tela_bem_vindo():
  ░ ░  ░░ ░ ▒  ░ ░ ▒  ▒  ░ ░  ░░ ░░   ░ ▒░   ░ ░▒  ░ ░    ░      ░▒ ░ ▒░ ▒ ░░ ░░   ░ ▒░  ░   ░ 
    ░     ░ ░    ░ ░  ░    ░      ░   ░ ░    ░  ░  ░    ░        ░░   ░  ▒ ░   ░   ░ ░ ░ ░   ░ 
    ░  ░    ░  ░   ░       ░  ░         ░          ░              ░      ░           ░       ░ 
-                ░                                                                             
-
-''',atraso=0.01)
-            ini_contagem = time.time()
-            
-            
-            print("""
- ⠀⠀⣀⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⣠⣤⡀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+                ░ 
+    '''
+    ascii_art = """
+⠀⠀⣀⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⣠⣤⡀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⢸⣧⠞⠁⡷⢿⣦⡀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣆⠀⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣼⢪⡇⠀⠀⣷⣶⢹⡇⢷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠛⠛⠉⠉⠉⢩⠉⠙⠛⣿⠛
 ⣿⣿⣿⣿⣿⣿⣷⡄⠘⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⢹⠘⣷⣄⢳⣿⣿⣾⣗⡿⠀⠀⠀⠀⢀⣟⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀
@@ -70,62 +73,65 @@ def tela_bem_vindo():
 ⠀⠀⠀⠀⣸⠁⣀⡴⠛⠁⠀⠀⠀⠀⠀⢠⢏⣿⣿⣿⠹⡟⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣙⠓⠈⠀⠁⠀⠀⠀⠀
 ⠀⠀⠀⠀⠻⠚⠁⠀⠀⠀⠀⠀⠀⠀⢠⣟⣾⣿⣿⣿⠀⡴⠋⣹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣃⡃⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡠⢤⠴⠒⢋⣾⣿⣿⣿⠇⡀⠂⢡⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣙⡇⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⠠⣄
-⠀⠀⠀⠀⠀⠀⠀⠀⠉⣶⣎⣁⣀⣀⣼⣿⣿⣿⣿⡮⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡌⢻⡇⣹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿       
+⠀⠀⠀⠀⠀⠀⠀⠀⠉⣶⣎⣁⣀⣀⣼⣿⣿⣿⣿⡮⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡌⢻⡇⣹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    """
+    nome_jogo = centralizar_texto(nome_jogo)
+    ascii_art = centralizar_texto(ascii_art)
 
-                    """)
-     
-def exibir_opcoes():
-    print(f"1. {Fore.RED}Iniciar{Style.RESET_ALL}")
-    print(f"2. {Fore.RED}Tutorial{Style.RESET_ALL}")
-    print(f"3. {Fore.RED}Sair{Style.RESET_ALL}")
-    
-def finalizar_jogo():
-    clear_screen()
-    print('Jogo encerrado\n')
-    input('Aperte qualquer tecla para voltar ao menu inicial...')
+    print(Fore.CYAN + nome_jogo)
+    print(Fore.MAGENTA + ascii_art)
+    print(Fore.GREEN + centralizar_texto("Pressione ENTER para iniciar"))
 
-def escolher_opcao():
-    while True:
-        exibir_opcoes()
-        try:
-            opcao_escolhida = int(input(f'\n{Fore.RED}Escolha uma opção:{Style.RESET_ALL}  '))
-            print(f'Você escolheu a opção {opcao_escolhida}')
-            if opcao_escolhida == 1:
-                pygame.mixer.music.stop()
-                clear_screen()
-                tocar_musica_2()
-                historia()
-                finalizar_jogo()
-                main()
-            elif opcao_escolhida == 2:
-                tutorial_game()
-                input('Aperte qualquer tecla para voltar ao menu inicial...')
-                main()
-            elif opcao_escolhida == 3:
-                finalizar_jogo()
-                return True  # Retorna True para indicar que o jogo foi finalizado
-            else:
-                opcao_invalida()
-        except ValueError:
-            opcao_invalida()
-            
+def menu_principal():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    tocar_musica()
+    tela_bem_vindo()
+    input()
+    jogar()
+
+def jogar():
+    opcao = ""
+    while opcao != "0":
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print(centralizar_texto("1. Novo Jogo"))
+        print(centralizar_texto("2. Tutorial"))
+        print(centralizar_texto("3. Créditos"))
+        print(centralizar_texto("0. Sair"))
+        opcao = input(Fore.CYAN + centralizar_texto("Escolha uma opção: "))
+
+        if opcao == "1":
+            iniciar_jogo()
+            historia()
+        elif opcao == "2":
+            tutorial_game()
+        elif opcao == "3":
+            creditos()
+        elif opcao == "0":
+            print(Fore.CYAN + centralizar_texto("Saindo do jogo..."))
+            time.sleep(2)
+        else:
+            print(Fore.RED + centralizar_texto("Opção inválida! Tente novamente."))
+            time.sleep(2)
+
+def iniciar_jogo():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(Fore.GREEN + centralizar_texto("Iniciando novo jogo..."))
+    time.sleep(2)
+
+def carregar_jogo():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(Fore.YELLOW + centralizar_texto("Carregando jogo salvo..."))
+    time.sleep(2)
+
+def creditos():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(Fore.MAGENTA + centralizar_texto("Créditos do jogo..."))
+    time.sleep(2)
+
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
+    
 
-def opcao_invalida():
-    print("Opção inválida. Por favor, escolha uma das opções disponíveis.")
-
-def main():
-    while True:
-        clear_screen()
-        tela_bem_vindo()
-        tocar_musica()  # Inicie a reprodução da música
-        if escolher_opcao():
-            break  # Sai do loop se o jogo foi finalizado0
-
-if __name__ == '__main__':
-    main()
-
-
-
-
+if __name__ == "__main__":
+    menu_principal()
