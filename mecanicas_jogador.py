@@ -107,17 +107,17 @@ def atacar(tempo_acao, inimigo, dano):
     global vida_inimigo
     global vida_player
     frases = ['\nVocê vê uma abertura. É sua vez de atacar! ',
-              f'\nO {inimigo} está vulnerável! Aproveite sua chance! ',
+              f'\nO(a) {inimigo} está vulnerável! Aproveite sua chance! ',
               '\nVocê sente a adrenalina. Qual é sua ação? ', 'Agora é com você! Prepare-se para atacar: ']
     
-    errou = [f'\nInfelizmente, seu ataque não encontra o {inimigo}.',
-             f'\nSeu ataque falha, deixando o {inimigo} ileso.',
-             f'\nApesar de seus esforços, você não consegue acertar o {inimigo}.',
-             f'\nSeu golpe passa raspando, mas não acerta o {inimigo}.']
+    errou = [f'\nInfelizmente, seu ataque não encontra o(a) {inimigo}.',
+             f'\nSeu ataque falha, deixando o(a) {inimigo} ileso.',
+             f'\nApesar de seus esforços, você não consegue acertar o(a) {inimigo}.',
+             f'\nSeu golpe passa raspando, mas não acerta o(a) {inimigo}.']
     
-    demorou = [f'\nVocê hesita por um momento e perde sua oportunidade de agir. O que permitiu que o {inimigo} lhe golpeasse, causando ',
-               f'\nSua hesitação permite ao {inimigo} agir antes de você, e lhe causar',
-               f'\nSua indecisão custa caro, e o {inimigo} aproveita a chance, causando ']
+    demorou = [f'\nVocê hesita por um momento e perde sua oportunidade de agir. O que permitiu que o(a) {inimigo} lhe golpeasse, causando ',
+               f'\nSua hesitação permite ao(a) {inimigo} agir antes de você, e lhe causar',
+               f'\nSua indecisão custa caro, e o(a) {inimigo} aproveita a chance, causando ']
     
     tempo_inicial = time.time()
     print_slow(random.choice(frases),0.02)
@@ -152,19 +152,19 @@ def defender_2(tempo_acao, inimigo, dano):
     defesa_exigida = random.choice(list(palavras_dfs_player.values()))
     palavra_digitada = ''
     
-    frases = [f'\nSeus instintos alertam você sobre o ataque iminente do {inimigo}. Rápido! Use: {defesa_exigida.upper()}\n', 
-              f'\nO {inimigo} faz um movimento agressivo em sua direção. Será necessário {defesa_exigida.upper()}\n',
-              f'\nO {inimigo} lança um olhar de desafio em sua direção, pronto para testar sua {defesa_exigida.upper()}.\n',
-              f'\nO som de passos pesados ecoa ao seu redor, anunciando a investida iminente do {inimigo}. É hora de mostrar sua {defesa_exigida.upper()}!\n']
+    frases = [f'\nSeus instintos alertam você sobre o ataque iminente do(a) {inimigo}. Rápido! Use: {defesa_exigida.upper()}\n', 
+              f'\nO(a) {inimigo} faz um movimento agressivo em sua direção. Será necessário {defesa_exigida.upper()}\n',
+              f'\nO(a) {inimigo} lança um olhar de desafio em sua direção, pronto para testar sua {defesa_exigida.upper()}.\n',
+              f'\nO som de passos pesados ecoa ao seu redor, anunciando a investida iminente do(a) {inimigo}. É hora de mostrar sua {defesa_exigida.upper()}!\n']
     print_slow(random.choice(frases),0.02)
     
-    defendeu = [f'\nVocê antecipa os movimentos do {inimigo} com uma precisão impressionante, bloqueando seu ataque com um {defesa_exigida} rápido e eficaz!\n',
-                f'\nVocê se move com uma graça surpreendente, desviando habilmente do ataque do {inimigo}. Sua {defesa_exigida} é impecável!\n']
-    contra = f'\nCom um movimento fluído, você desvia o ataque do {inimigo}, transformando seu ímpeto ofensivo em uma oportunidade de contra-ataque. Sua defesa não só protege, mas também surpreende!\n'
+    defendeu = [f'\nVocê antecipa os movimentos do(a) {inimigo} com uma precisão impressionante, bloqueando seu ataque com um {defesa_exigida} rápido e eficaz!\n',
+                f'\nVocê se move com uma graça surpreendente, desviando habilmente do ataque do(a) {inimigo}. Sua {defesa_exigida} é impecável!\n']
+    contra = f'\nCom um movimento fluído, você desvia o ataque do(a) {inimigo}, transformando seu ímpeto ofensivo em uma oportunidade de contra-ataque. Sua defesa não só protege, mas também surpreende!\n'
     
-    sofreu = [f'\nO golpe do {inimigo} encontra seu caminho através de suas defesas, deixando uma sensação de impacto brutal em seu corpo.\n',
-              f'\nVocê é pego desprevenido pelo ataque do {inimigo}, que encontra sua brecha.\n',
-              f'\nVocê se vê cercado pela dor do ataque do {inimigo}, que parece encontrar uma fraqueza em suas defesas e explorá-la ao máximo.\n']
+    sofreu = [f'\nO golpe do(a) {inimigo} encontra seu caminho através de suas defesas, deixando uma sensação de impacto brutal em seu corpo.\n',
+              f'\nVocê é pego desprevenido pelo ataque do(a) {inimigo}, que encontra sua brecha.\n',
+              f'\nVocê se vê cercado pela dor do ataque do(a) {inimigo}, que parece encontrar uma fraqueza em suas defesas e explorá-la ao máximo.\n']
     
     while True:
         tempo_final = time.time() - tempo_inicial

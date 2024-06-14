@@ -109,7 +109,7 @@ def historia():
                 mecanicas_jogador.vida_player = 30
                 mecanicas_jogador.vida_inimigo = 30
                 
-                batalha_comum('Mortos-Vivos',8,5,6)
+                batalha_comum('Grupo de Mortos-Vivos',8,5,6)
                 aprendizado('impacto',3)
                 
                 print_slow(f"""Após derrotar o grupo de mortos-vivos, seu codex aprendeu uma nova palavra: IMPACTO. Você percebe que na verdade os mortos-vivos foram invocados por alguma coisa. Adentrando nas partes mais profundas da catacumbas 
@@ -138,7 +138,7 @@ def historia():
                     caverna você se depara com um grupo de 4 ladrões, PREPARE-SE!""",0.048)
             mecanicas_jogador.vida_player = 45
             mecanicas_jogador.vida_inimigo = 50
-            batalha_comum('Bandidos',10,5,6)
+            batalha_comum('Gangue de Bandidos',10,5,6)
             aprendizado('estocada',4)
         
         print_slow(f"""Saindo da cidade de Thalassëa, prosseguindo por mais alguns dias, você se depara com um templo antigo. Aproximando-se um pouco mais percebe que há um tabuleta
