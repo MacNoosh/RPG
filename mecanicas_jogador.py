@@ -10,12 +10,6 @@ palavras_dfs_player = {'corte': 'resistencia'}
 
 vida_player = vida_inimigo = 30
 
-vida_miniboss1 = 50
-vida_miniboss2 = 70
-
-vida_boss = 100
-
-
 
 def aprendizado(palavra, dano):
     palavras_atk[palavra] = dano
