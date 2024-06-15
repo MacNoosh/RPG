@@ -80,8 +80,8 @@ def tela_bem_vindo():
     ascii_art = centralizar_texto(ascii_art)
 
     print(Fore.CYAN + nome_jogo)
-    print(Fore.MAGENTA + ascii_art)
-    print(Fore.GREEN + centralizar_texto("Pressione ENTER para iniciar"))
+    print(Fore.RED + ascii_art)
+    print(Fore.CYAN + centralizar_texto("Pressione ENTER para iniciar"))
 
 def menu_principal():
     os.system('cls' if os.name == 'nt' else 'clear')
