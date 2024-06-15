@@ -1,8 +1,7 @@
-import random
-import time
-import os
+from game import centralizar_texto
+
 def tutorial_game():
-    print("""
+    print(centralizar_texto("""
          .----.        .----.
 DESVIAR:|  🢀   | ou   |  🢂   |  
          ------        ------
@@ -28,6 +27,6 @@ ATACAR:  |  A   |
 CONTRA-ATACAR:|  D   | +  |  A   |  
                ------      ------     
         
-          """)   
-    
+          """))   
+    input()
    

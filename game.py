@@ -3,7 +3,7 @@ import shutil
 import pygame
 import time
 from colorama import init, Fore, Style
-from tutorial import tutorial_game
+from tutorial import *
 from historia import *
 from funcoes import *
 
@@ -12,11 +12,11 @@ init(autoreset=True)
 pygame.mixer.init()
 
 def tocar_musica():
-    pygame.mixer.music.load(r"C:\Elden{Str}ing\Cronus.mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
+    pygame.mixer.music.load(r"C:\Users\MacNoosh\Documents\GitHub\RPG\Cronus.mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
     pygame.mixer.music.play(-1)
 
 def tocar_musica_2():
-    pygame.mixer.music.load(r"C:\Elden{Str}ing\teste.mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
+    pygame.mixer.music.load(r"C:\Users\MacNoosh\Documents\GitHub\RPG\teste.mp3") #DEVE-SE ALTERAR PARA O CAMINHO DO SEU REPOSITORIO
     pygame.mixer.music.play(-1)
 
 def centralizar_texto(texto):
@@ -103,8 +103,8 @@ def jogar():
             iniciar_jogo()
             tocar_musica_2()
             historia()
-            game_over()
         elif opcao == "2":
+            clear_screen
             tutorial_game()
         elif opcao == "3":
             clear_screen()
