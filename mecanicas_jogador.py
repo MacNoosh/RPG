@@ -275,11 +275,10 @@ def batalha_comum(inimigo,dano, tempo_atk, tempo_dfs):
         print(f'Vida Player: {vida_player}\nVida Inimigo: {vida_inimigo}')
         
         if vida_player <= 0:
-            print('perdeu')
+            game_over()
             break
         
         if vida_inimigo <= 0:
-            print('venceu. ir pra próxima.')
             break   
 
 def batalha_miniboss(inimigo, dano, tempo_atk,tempo_dfs):
@@ -300,9 +299,8 @@ def batalha_miniboss(inimigo, dano, tempo_atk,tempo_dfs):
         print(f'\nVida Player: {vida_player}\nVida Inimigo: {vida_inimigo}')
         
         if vida_player <= 0:
-            print('perdeu')
+            game_over()
             break
         
         if vida_inimigo <= 0:
-            print('venceu. ir pra próxima.')
             break         
