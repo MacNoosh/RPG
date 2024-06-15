@@ -44,6 +44,13 @@ def limpa_linha():
     for _ in range(100):
         keyboard.press_and_release('backspace')
         
+def iniciar_jogo():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(Fore.GREEN + centralizar_texto("Iniciando novo jogo..."))
+    time.sleep(2)
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def centralizar_texto(texto, largura=80):
     return texto.center(largura)

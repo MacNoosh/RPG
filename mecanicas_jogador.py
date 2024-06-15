@@ -19,7 +19,7 @@ def aprendizado(palavra, dano):
 
 def tutorial_atk(tempo):
     tempo_inicial = time.time()
-    palavra = input('Diga a palavra de ATAQUE que você aprendeu até agora: ')
+    palavra = input('Diga a palavra de ataque que você aprendeu até agora, CORTE:  ')
     while True:
         tempo_final = time.time() - tempo_inicial
         if tempo_final >= tempo:
@@ -36,14 +36,14 @@ def tutorial_atk(tempo):
 
 def tutorial_defesa(tempo):
     tempo_inicial = time.time()
-    palavra = input('Agora vamos treinar sua defesa, diga a palavra de DEFESA que você aprendeu até agora: ')
+    palavra = input('Agora vamos treinar sua defesa, diga a palavra de defesa que você aprendeu RESISTENCIA: ')
     while True:
         tempo_final = time.time() - tempo_inicial
         if tempo_final >= tempo:
             print(f'Demorou muito ({tempo_final:.1f} segundos)! Diga mais rápido!')
             tutorial_defesa(tempo)
             break
-        elif tempo_final < tempo and palavra == 'finta':
+        elif tempo_final < tempo and palavra == 'resistencia':
             print(f'Legal! Você executou o seu ataque em {tempo_final:.1f} segundos. A defesa também se aproveitará da sua agilidade!') 
             break
         else:

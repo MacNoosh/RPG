@@ -18,9 +18,13 @@ def historia():
 
     No pátio do castelo, a infantaria dos que marcham para combater a dominação do cavaleiro da morte, Dreadmo'or, treinam incansavlmente. Em um momento, você se pega pensando em todos
     os acontecimentos que culminaram para essa situação, nesse momento você sente cheiro de sangue... você se distraiu na hora do treinamento, REAJA!
-               DIGITE CORTE PARA ATACAR / FINTA PRA DEFENDER / DIRECIONAIS PARA DESVIAR""",0.048)
+               Digite CORTE para atacar | Digite RESISTENCIA para defender""",0.048)
 
-    #tutorial_desvio(3)
+    contador("",3,'VAI')
+    tutorial_atk(9)
+    contador("",3,'VAI')
+    tutorial_defesa(9)
+
       
 
     print_slow("""Após o treinamento, o esquadrão de batedores do reino trazem péssimas notícias, um dos exército de Dreadmo'or marcha para atacar um dos poucos bastiões que sobraram 
@@ -40,7 +44,7 @@ def historia():
     Que a tua alma seja banhada por essa luz divina, lembrando-te de que a esperança é a palavra que nunca se apaga.". Após as palavras da desconhecida, você 
     volta a vida no campo de batalha, ensanguentado e com pouca força vital, algo dentro de você grita!!!""",0.048)
 
-    #esperança(3)
+    esperança(6)
 
     print_slow(""" Você tenta gritar algo mas apenas sai um gemido inaudível. Quase desmaindo novamente você ainda consegue acompanhar o que vinha a seguir na batalha, por algum motivo, depois 
         da sua ressureição, Dreadmo'or parecia enfraquecido. Galadran Sussurroestelar emerge, e em um dialeto estranho, fala algo sonoramente parecido com sagrado. Após a fala de Galadran
@@ -204,8 +208,7 @@ def historia():
             batalha_comum('Bruxa',18,3.5,9)
             aprendizado('rompimento',6)    
             
-    #CAVALEIRO DA MORTE - FIM DA FLORESTA
-        
+            
         print_slow("""Após percorrer um longo caminho você finalmente chega ao seu objetivo, a fortaleza do desespero de Dread'moor. Mantendo uma distância segura você observa o funcionamento 
             do castelo, quando abruptamente você sente uma presença vindo atrás de você, desembainhando rapidamente sua espada e indo ao encontro de uma garganta... familiar? Era 
             Galadran, impressionado ele fala: “Pelo visto a aventura fez melhor a você do que a mim”, logo em seguida você pede desculpas e o velho mago lhe dá um sorriso. Vocês 
@@ -361,7 +364,6 @@ def historia():
         creditos()
         input('Aperte qualquer botão para voltar ao menu...')
         iniciar_jogo()
-
 
 
 
