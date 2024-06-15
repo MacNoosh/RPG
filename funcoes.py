@@ -42,3 +42,39 @@ def contador(texto,fim,textofinal):
 def limpa_linha():
     for _ in range(100):
         keyboard.press_and_release('backspace')
+        
+def creditos():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(Fore.MAGENTA + centralizar_texto('''
+Direcao:
+Pedro Almeida
+
+Roteiro:
+Douglas Vignoli
+
+Edicao e Pos-producao:
+Raphael Oliveira
+
+Animacao:
+Fabio Souteiro
+
+Consultoria Tecnica:
+Neilton Junior '''))
+    time.sleep(5)
+
+
+def game_over():
+    game_over = '''
+▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███  
+ ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒
+▒██░▄▄▄░▒██  ▀█▄  ▓██    ▓██░▒███      ▒██░  ██▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒
+░▓█  ██▓░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄    ▒██   ██░  ▒██ █░░▒▓█  ▄ ▒██▀▀█▄  
+░▒▓███▀▒ ▓█   ▓██▒▒██▒   ░██▒░▒████▒   ░ ████▓▒░   ▒▀█░  ░▒████▒░██▓ ▒██▒
+ ░▒   ▒  ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░   ░ ▒░▒░▒░    ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░
+  ░   ░   ▒   ▒▒ ░░  ░      ░ ░ ░  ░     ░ ▒ ▒░    ░ ░░   ░ ░  ░  ░▒ ░ ▒░
+░ ░   ░   ░   ▒   ░      ░      ░      ░ ░ ░ ▒       ░░     ░     ░░   ░ 
+      ░       ░  ░       ░      ░  ░       ░ ░        ░     ░  ░   ░     
+                                                     ░                   
+    '''
+    game_over = centralizar_texto(game_over)
+    print(Fore.CYAN + game_over)

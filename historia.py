@@ -1,4 +1,5 @@
 from funcoes import *
+from funcoes import print_slow
 from mecanicas_jogador import *
 import mecanicas_jogador
 import time
