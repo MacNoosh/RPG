@@ -40,14 +40,10 @@ def contador(texto,fim,textofinal):
     print(textofinal)
 
 
-
 def limpa_linha():
     for _ in range(100):
         keyboard.press_and_release('backspace')
         
-
-
-
 
 def centralizar_texto(texto, largura=80):
     return texto.center(largura)
@@ -85,8 +81,8 @@ def creditos():
     print("[Fecha cortina]")
 
 
-
 def game_over():
+    os.system('cls' if os.name == 'nt' else 'clear')
     game_over = '''
 ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███  
  ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒
@@ -101,3 +97,6 @@ def game_over():
     '''
     game_over = centralizar_texto(game_over)
     print(Fore.RED + game_over)
+    
+    
+    
