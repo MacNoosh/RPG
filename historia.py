@@ -183,8 +183,8 @@ def historia():
                 aprendizado('esmagamento',7)
         
         print_slow(f"""Quanto mais próximo da Fortaleza do Desespero, você percebe um estado de putrefação avançado na floresta no qual a transformou num grande pântano. O cheiro era
-                        insuportável, você não via a hora de sair daquele lugar insalubre, derrepente você nota um vulto passandos entre as árvores, e pergunta a si mesmo que tipo de ser viveria naquelas
-                        condições, {nome_player} deseja seguir o vulto? """,0.048)
+                        insuportável, você não via a hora de sair daquele lugar insalubre, derrepente você nota um vulto passandos entre as árvores, e pergunta a si mesmo que tipo de ser 
+                        viveria naquelas condições, {nome_player} deseja seguir o vulto? """,0.048)
         
         resposta = input('Continuar? [S/N] (Digite Codex para ver sua lista de ataques.) ').upper()
         while True:
@@ -199,10 +199,10 @@ def historia():
             print_slow(f"""Com curiosidade você vai em busca da resposta e seguindo adiante encontra uma cabana cheia de limo e fungos pelas paredes, aparentemente a porta se encontrava
                             meio aberta e você não hesita em entrar nessa cabana. Com um relanse de olhar você já sabia qual criatura vivia ali, com caldeirões e restos mortais de animais, era óbivio ser
                             um covil de uma Bruxa. Quando já estava pronto para partir, tarde demais! {nome_player}, PREPARE-SE""",0.048)
-        mecanicas_jogador.vida_player = 60
-        mecanicas_jogador.vida_inimigo = 50
-        batalha_comum('Bruxa',18,3.5,4)
-        aprendizado('rompimento',6)    
+            mecanicas_jogador.vida_player = 60
+            mecanicas_jogador.vida_inimigo = 50
+            batalha_comum('Bruxa',18,3.5,4)
+            aprendizado('rompimento',6)    
             
     #CAVALEIRO DA MORTE - FIM DA FLORESTA
         
