@@ -205,7 +205,19 @@ def historia():
             
     #CAVALEIRO DA MORTE - FIM DA FLORESTA
         
-        print('Fim de jogo.')  
+        print_slow("""Após percorrer um longo caminho você finalmente chega ao seu objetivo, a fortaleza do desespero de Dread'moor. Mantendo uma distância segura você observa o funcionamento 
+            do castelo, quando abruptamente você sente uma presença vindo atrás de você, desembainhando rapidamente sua espada e indo ao encontro de uma garganta... familiar? Era 
+            Galadran, impressionado ele fala: “Pelo visto a aventura fez melhor a você do que a mim”, logo em seguida você pede desculpas e o velho mago lhe dá um sorriso. Vocês 
+            fazem uma breve reunião para escolher a melhor abordagem, Galadran define a melhor estratégia será ele limar os salões do castelo para você conseguir enfrentar o cavaleiro
+            da morte. Após uma breve conversa, vocês partem em direção a fortaleza, Galadran chega massacrando as tropas que restaram no castelo limpando uma sala após a outra, mas 
+            era perceptível que pela quantidade de mana utilizada ele não duraria muito tempo, utilizando os últimos resquícios de poder mágico ele se esgota na ante-sala de Dread'moor,
+            ele vira pra você e fala: “Agora é a hora de um novo herói meu jovem, que a deusa lhe abençoe, boa sorte!” depois das palavras do mago antes de abrir a porta você sente o
+            mal encarnado atrás delas, com um longo suspiro você abre a porta. De certa maneira parecia que o cavaleiro da morte já lhe esperava, o olhar dele te menospreza, mas ao 
+            mesmo tempo Solistra lhe dava a benção, coragem e poder. Você sente seu corpo imbuído por luz sagrada, PREPARE-SE!""",0.048)
+        mecanicas_jogador.vida_player = 70
+        mecanicas_jogador.vida_inimigo = 100
+        batalha_comum("Dread'moor", 25,3,3.5)
+
             
     else:
         print_slow(f"""Logo após a sua escolha do seu destino, o mago fala que irá pela Floresta dos Susurros Antigos, que cada caminho há pelo menos 2 Generais de Dreadmo'or e que cada 
@@ -304,7 +316,15 @@ def historia():
                        percerber já tinha sido notado. Prepare-se {nome_player}!
                        """,0.048)
         
-        print('Fim de jogo.')
+        print_slow("""Após percorrer um longo caminho você finalmente chega ao seu objetivo, a fortaleza do desespero de Dread'moor. Mantendo uma distância segura você observa o funcionamento 
+            do castelo, quando abruptamente você sente uma presença vindo atrás de você, desembainhando rapidamente sua espada e indo ao encontro de uma garganta... familiar? Era 
+            Galadran, impressionado ele fala: “Pelo visto a aventura fez melhor a você do que a mim”, logo em seguida você pede desculpas e o velho mago lhe dá um sorriso. Vocês 
+            fazem uma breve reunião para escolher a melhor abordagem, Galadran define a melhor estratégia será ele limar os salões do castelo para você conseguir enfrentar o cavaleiro
+            da morte. Após uma breve conversa, vocês partem em direção a fortaleza, Galadran chega massacrando as tropas que restaram no castelo limpando uma sala após a outra, mas 
+            era perceptível que pela quantidade de mana utilizada ele não duraria muito tempo, utilizando os últimos resquícios de poder mágico ele se esgota na ante-sala de Dread'moor,
+            ele vira pra você e fala: “Agora é a hora de um novo herói meu jovem, que a deusa lhe abençoe, boa sorte!” depois das palavras do mago antes de abrir a porta você sente o
+            mal encarnado atrás delas, com um longo suspiro você abre a porta. De certa maneira parecia que o cavaleiro da morte já lhe esperava, o olhar dele te menospreza, mas ao 
+            mesmo tempo Solistra lhe dava a benção, coragem e poder. Você sente seu corpo imbuído por luz sagrada, PREPARE-SE!""",0.048)
 
 
 
