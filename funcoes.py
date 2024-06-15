@@ -1,6 +1,8 @@
 import time
 import keyboard
 from game import *
+import os
+from colorama import Fore, Style
 
 
 def esperança(tempo):
@@ -43,24 +45,45 @@ def limpa_linha():
     for _ in range(100):
         keyboard.press_and_release('backspace')
         
+
+
+
+
+def centralizar_texto(texto, largura=80):
+    return texto.center(largura)
+
 def creditos():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print(Fore.MAGENTA + centralizar_texto('''
-Direcao:
-Pedro Almeida
+    print(Fore.GREEN + centralizar_texto("CREDITOS\n\n\n\n"))
+    time.sleep(2)
+    print(centralizar_texto("[Cena: Fundo escuro, letras brancas surgem lentamente]\n\n"))
+    time.sleep(2)
+    print(centralizar_texto("**Créditos Finais**\n\n"))
+    time.sleep(1)
+    print(centralizar_texto("**Direção Criativa**\n"))
+    time.sleep(1)
+    print(centralizar_texto("Pedro Almeida\n\n"))
+    time.sleep(1)
+    print(centralizar_texto("**Roteiro e Produção**\n"))
+    time.sleep(1)
+    print(centralizar_texto("Douglas Vignoli\n\n"))
+    time.sleep(1)
+    print(centralizar_texto("**Direção e Pós-produção**\n"))
+    time.sleep(1)
+    print(centralizar_texto("Raphael Oliveira\n\n"))
+    time.sleep(1)
+    print(centralizar_texto("**Tester e Produção**\n"))
+    time.sleep(1)
+    print(centralizar_texto("Fábio Souteiro\n\n"))
+    time.sleep(1)
+    print(centralizar_texto("**Consultoria Técnica**\n"))
+    time.sleep(1)
+    print(centralizar_texto("Neilton Júnior\n\n"))
+    time.sleep(2)
+    print(centralizar_texto("Deu trabalho, mas valeu a pena.\n"))
+    time.sleep(3)
+    print("[Fecha cortina]")
 
-Roteiro:
-Douglas Vignoli
-
-Edicao e Pos-producao:
-Raphael Oliveira
-
-Animacao:
-Fabio Souteiro
-
-Consultoria Tecnica:
-Neilton Junior '''))
-    time.sleep(5)
 
 
 def game_over():
@@ -77,4 +100,4 @@ def game_over():
                                                      ░                   
     '''
     game_over = centralizar_texto(game_over)
-    print(Fore.CYAN + game_over)
+    print(Fore.RED + game_over)
