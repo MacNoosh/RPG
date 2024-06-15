@@ -110,14 +110,14 @@ def historia():
                 mecanicas_jogador.vida_player = 30
                 mecanicas_jogador.vida_inimigo = 30
                 
-                batalha_comum('Grupo de Mortos-Vivos',8,5,6)
+                batalha_comum('Grupo de Mortos-Vivos',8,5,10)
                 aprendizado('impacto',3)
                 
                 print_slow(f"""Após derrotar o grupo de mortos-vivos, seu codex aprendeu uma nova palavra: IMPACTO. Você percebe que na verdade os mortos-vivos foram invocados por alguma coisa. Adentrando nas partes mais profundas da catacumbas 
                 você sente um poder sombrio, com cautela você se aproxima e se vê diante de um dos Generais de Dreadmo'or, Necroth o Senhor da Sepultura. {nome_player} PREPARE-SE""",0.048)
                 mecanicas_jogador.vida_player = 35
                 mecanicas_jogador.vida_inimigo = 50
-                batalha_comum('Necroth',9,4,5) # mudar para batalha_miniboss
+                batalha_miniboss('Necroth',9,4,9) # mudar para batalha_miniboss
                 
                 
         print_slow(f"""Continuando pela estrada da floresta você chega a cidade élfica de Thalassëa, após uma rápida verificação nos portões, o acesso a cidade é liberado. Um clima de
@@ -139,7 +139,7 @@ def historia():
                     caverna você se depara com um grupo de 4 ladrões, PREPARE-SE!""",0.048)
             mecanicas_jogador.vida_player = 45
             mecanicas_jogador.vida_inimigo = 50
-            batalha_comum('Gangue de Bandidos',10,5,6)
+            batalha_comum('Gangue de Bandidos',10,5,9)
             aprendizado('estocada',4)
         
         print_slow(f"""Saindo da cidade de Thalassëa, prosseguindo por mais alguns dias, você se depara com um templo antigo. Aproximando-se um pouco mais percebe que há um tabuleta
@@ -172,14 +172,14 @@ def historia():
             if resposta == 'S':
                 mecanicas_jogador.vida_player = 50
                 mecanicas_jogador.vida_inimigo = 50
-                batalha_comum('Urso Corrompido',12,5,6)
+                batalha_comum('Urso Corrompido',12,5,9)
                 print_slow(f"""Matando o Urso, o caminho para a sala principal está aberto e você já presume do que está adiante é um dos Generais de Dreadmo'or. {nome_player}, prepare-se!""",0.048)
                 aprendizado('arremesso',5)
                 
                 
                 mecanicas_jogador.vida_player = 55
                 mecanicas_jogador.vida_inimigo = 70
-                batalha_comum('General',15,4,5) # mudar para miniboss
+                batalha_miniboss('General',15,4,9) # mudar para miniboss
                 aprendizado('esmagamento',7)
         
         print_slow(f"""Quanto mais próximo da Fortaleza do Desespero, você percebe um estado de putrefação avançado na floresta no qual a transformou num grande pântano. O cheiro era
@@ -201,7 +201,7 @@ def historia():
                             um covil de uma Bruxa. Quando já estava pronto para partir, tarde demais! {nome_player}, PREPARE-SE""",0.048)
             mecanicas_jogador.vida_player = 60
             mecanicas_jogador.vida_inimigo = 50
-            batalha_comum('Bruxa',18,3.5,4)
+            batalha_comum('Bruxa',18,3.5,9)
             aprendizado('rompimento',6)    
             
     #CAVALEIRO DA MORTE - FIM DA FLORESTA
@@ -217,7 +217,7 @@ def historia():
             mesmo tempo Solistra lhe dava a benção, coragem e poder. Você sente seu corpo imbuído por luz sagrada, PREPARE-SE!""",0.048)
         mecanicas_jogador.vida_player = 70
         mecanicas_jogador.vida_inimigo = 100
-        batalha_comum("Dread'moor", 25,3,3.5)
+        batalha_miniboss("Dread'moor", 25,3,8)
 
             
     else:
