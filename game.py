@@ -107,7 +107,9 @@ def jogar():
         elif opcao == "2":
             tutorial_game()
         elif opcao == "3":
+            clear_screen()
             creditos()
+            iniciar_jogo()
         elif opcao == "0":
             print(Fore.CYAN + centralizar_texto("Saindo do jogo..."))
             time.sleep(2)
