@@ -276,6 +276,7 @@ def batalha_comum(inimigo,dano, tempo_atk, tempo_dfs):
         
         if vida_player <= 0:
             game_over()
+            input('Aperte qualquer botão para voltar ao menu...')
             iniciar_jogo()
             break
         
@@ -301,6 +302,7 @@ def batalha_miniboss(inimigo, dano, tempo_atk,tempo_dfs):
         
         if vida_player <= 0:
             game_over()
+            input('Aperte qualquer botão para voltar ao menu...')
             iniciar_jogo()
             break
         
