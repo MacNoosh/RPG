@@ -142,7 +142,7 @@ def historia():
             batalha_comum('Gangue de Bandidos',10,5,9)
             aprendizado('estocada',4)
         
-        print_slow(f"""Saindo da cidade de Thalassëa, prosseguindo por mais alguns dias, você se depara com um templo antigo. Aproximando-se um pouco mais percebe que há um tabuleta
+        print_slow(f"""Após derrotar a gangue de banidos, seu codex aprendeu uma nova palavra: ESTOCADA. Saindo da cidade de Thalassëa, prosseguindo por mais alguns dias, você se depara com um templo antigo. Aproximando-se um pouco mais percebe que há um tabuleta
                     de mármore que tinha gravado em si a seguinte frase: "Santuário da Eterna Renovação". Um pouco contraditório, já que você percebe que ao redor do templo há muita vegetação em 
                     estado de putrefação. Você deseja adentrar no templo, {nome_player}?""",0.048)
         
@@ -173,16 +173,16 @@ def historia():
                 mecanicas_jogador.vida_player = 50
                 mecanicas_jogador.vida_inimigo = 50
                 batalha_comum('Urso Corrompido',12,5,9)
-                print_slow(f"""Matando o Urso, o caminho para a sala principal está aberto e você já presume do que está adiante é um dos Generais de Dreadmo'or. {nome_player}, prepare-se!""",0.048)
+                print_slow(f"""Após derrotar o urso corrompido, seu codex aprendeu uma nova palavra: ARREMESSO. O caminho para a sala principal está aberto e você já presume do que está adiante é um dos Generais de Dreadmo'or. {nome_player}, prepare-se!""",0.048)
                 aprendizado('arremesso',5)
                 
                 
                 mecanicas_jogador.vida_player = 55
                 mecanicas_jogador.vida_inimigo = 70
-                batalha_miniboss('General',15,4,9) # mudar para miniboss
+                batalha_miniboss('General Mortanis',15,4,9) # mudar para miniboss
                 aprendizado('esmagamento',7)
         
-        print_slow(f"""Quanto mais próximo da Fortaleza do Desespero, você percebe um estado de putrefação avançado na floresta no qual a transformou num grande pântano. O cheiro era
+        print_slow(f"""Após derrotar o General Mortanis, seu codex aprendeu uma nova palavra: ESMAGAMENTO. Quanto mais próximo da Fortaleza do Desespero, você percebe um estado de putrefação avançado na floresta no qual a transformou num grande pântano. O cheiro era
                         insuportável, você não via a hora de sair daquele lugar insalubre, derrepente você nota um vulto passandos entre as árvores, e pergunta a si mesmo que tipo de ser 
                         viveria naquelas condições, {nome_player} deseja seguir o vulto? """,0.048)
         
@@ -198,7 +198,7 @@ def historia():
         if resposta == 'S':
             print_slow(f"""Com curiosidade você vai em busca da resposta e seguindo adiante encontra uma cabana cheia de limo e fungos pelas paredes, aparentemente a porta se encontrava
                             meio aberta e você não hesita em entrar nessa cabana. Com um relanse de olhar você já sabia qual criatura vivia ali, com caldeirões e restos mortais de animais, era óbivio ser
-                            um covil de uma Bruxa. Quando já estava pronto para partir, tarde demais! {nome_player}, PREPARE-SE""",0.048)
+                            um covil de uma Bruxa. Quando já estava pronto para partir, tarde demais! Seu Codez aprenderá a palavra ROMPIMENTO {nome_player}, PREPARE-SE""",0.048)
             mecanicas_jogador.vida_player = 60
             mecanicas_jogador.vida_inimigo = 50
             batalha_comum('Bruxa',18,3.5,9)
@@ -218,6 +218,9 @@ def historia():
         mecanicas_jogador.vida_player = 70
         mecanicas_jogador.vida_inimigo = 100
         batalha_miniboss("Dread'moor", 25,3,8)
+        creditos()
+        input('Aperte qualquer botão para voltar ao menu...')
+        iniciar_jogo()
 
             
     else:
@@ -244,9 +247,17 @@ def historia():
                 resposta = input('Continuar? [S/N] ').upper()
             
             if resposta == 'S':
-                print_slow(f"""Após derrotar os orcs um deles ainda fica vivo, após interroga-lo é revelado o que lhe espera adiante, um dos generais de Dreadmo'or, Zorgrak o Orgro.
+                mecanicas_jogador.vida_player = 30
+                mecanicas_jogador.vida_inimigo = 30
+                
+                batalha_comum('Grupo de Orcs',8,5,10)
+                aprendizado('impacto',4)
+                print_slow(f"""Após derrotar o grupo de orcs, seu codex aprendeu uma nova palavra: IMPACTO. Você percebe que um deles ainda está vivo, após interroga-lo é revelado o que lhe espera adiante, um dos generais de Dreadmo'or, Zorgrak o Ogro.
                 Deseja enfrenta-lo?
                 """,0.048)
+                mecanicas_jogador.vida_player = 30
+                mecanicas_jogador.vida_inimigo = 50
+                batalha_miniboss('Zorgrak',9,4,9) 
 
         print_slow(f"""Após deixar a mina você continua pela trilha da montanha por algumas noites, depois de alguns dias em um pedaço você nota um construção misteirosa. Deseja 
                    investigar?
@@ -264,8 +275,12 @@ def historia():
         if resposta == 'S':
             print_slow(f"""Chegando mais perto você percebe que a construção nada mais era que um ninho de harpia. Prepare-se {nome_player}!
                 """,0.048)
+            mecanicas_jogador.vida_player = 35
+            mecanicas_jogador.vida_inimigo = 50
+            batalha_comum('Grupo de Harpias',10,5,9)
+            aprendizado('estocada',5)
         
-        print_slow(f"""Subindo ainda mais você chega no vilarejo Lume da Montanha, a população local parece surpresa com sua presença. Conversando com os locais eles falam que as visitas
+        print_slow(f"""Após derrotar o grupo de harpias, seu codex aprendeu uma nova palavra: ESTOCADA. Subindo ainda mais você chega no vilarejo Lume da Montanha, a população local parece surpresa com sua presença. Conversando com os locais eles falam que as visitas
             diminuiram consideravelmente devido ao aumento de ataque de monstros no vilarejo e que gerealmente eles acontecem a noite. Você deseja passar a noite {nome_player}?""",0.048)
         
         resposta = input('Continuar? [S/N] (Digite Codex para ver sua lista de ataques.) ').upper()
@@ -291,14 +306,24 @@ def historia():
                     break
             
             if resposta == 'S':
-                print_slow(f"""Depois de aniquilar os dois javalis você pede mais informações sobre o que exatamente está acontecendo, um dos moradores que tinha mais conhecimento fala
+                mecanicas_jogador.vida_player = 35
+                mecanicas_jogador.vida_inimigo = 50
+                batalha_comum('Bando de Javalis',12,5,9)
+                print_slow(f"""Após derrotar o bando de javalis, seu codex aprendeu uma nova palavra: ARREMESSO. Depois de aniquilar os dois javalis você pede mais informações sobre o que exatamente está acontecendo, um dos moradores que tinha mais conhecimento fala
                            que depois que sombras transformaram dia em noite no vilarejo as criaturas que tinham seu habitat um ponto mais alto perto do vilarejo começaram a aparecer.
                            Então você decide investigar, chegando perto do local aonde os javalis ficavam você sente um cheiro de putrefação e logo percebe o porque, haviam vários cadáveres
                            a maioria todos comidos, indo mais além, você encontra o motivo de tudo. Era um dos generais de Dreadmo'or, o dragão Typhorix. Prepare-se {nome_player}!
                        """,0.048)
+                aprendizado('arremesso',6)
+                
+                
+                mecanicas_jogador.vida_player = 40
+                mecanicas_jogador.vida_inimigo = 70
+                batalha_miniboss('Typhorix',15,4,9) # mudar para miniboss
+                aprendizado('esmagamento',8)
         
         
-        print_slow(f"""Descendo a cordilheira rumo a Fortaleza do Desespero você nota que a natureza está fora do seu equilibrio, vulcões com atividade além do normal fazendo surgir rios de
+        print_slow(f"""Após derrotar o Typhorix, seu codex aprendeu uma nova palavra: ESMAGAMENTO. Descendo a cordilheira rumo a Fortaleza do Desespero você nota que a natureza está fora do seu equilibrio, vulcões com atividade além do normal fazendo surgir rios de
                    lava, o que tornava a caminhada ainda mais difícil. Algum tempo depois você sente tremores estranhos vindo da sua esquerda mesclado com alguns gritos. Deseja investigar
                    {nome_player}?
                        """,0.048)
@@ -314,8 +339,12 @@ def historia():
         
         if resposta == 'S':
             print_slow(f"""Chegando ao epicentro dos tremores e ondem haviam os gritos percebe-se o que restou de alguns centauros que acabam de lutar com um gigante de lava, antes de você
-                       percerber já tinha sido notado. Prepare-se {nome_player}!
+                       percerber já tinha sido notado. Seu codex aprenderá a palavra ROMPIMENTO, Prepare-se {nome_player}!
                        """,0.048)
+            mecanicas_jogador.vida_player = 45
+            mecanicas_jogador.vida_inimigo = 50
+            batalha_comum('Gigante de Lava',18,3.5,9)
+            aprendizado('rompimento',7)    
         
         print_slow("""Após percorrer um longo caminho você finalmente chega ao seu objetivo, a fortaleza do desespero de Dread'moor. Mantendo uma distância segura você observa o funcionamento 
             do castelo, quando abruptamente você sente uma presença vindo atrás de você, desembainhando rapidamente sua espada e indo ao encontro de uma garganta... familiar? Era 
@@ -326,7 +355,12 @@ def historia():
             ele vira pra você e fala: “Agora é a hora de um novo herói meu jovem, que a deusa lhe abençoe, boa sorte!” depois das palavras do mago antes de abrir a porta você sente o
             mal encarnado atrás delas, com um longo suspiro você abre a porta. De certa maneira parecia que o cavaleiro da morte já lhe esperava, o olhar dele te menospreza, mas ao 
             mesmo tempo Solistra lhe dava a benção, coragem e poder. Você sente seu corpo imbuído por luz sagrada, PREPARE-SE!""",0.048)
-
+        mecanicas_jogador.vida_player = 55
+        mecanicas_jogador.vida_inimigo = 100
+        batalha_miniboss("Dread'moor", 25,3,8)
+        creditos()
+        input('Aperte qualquer botão para voltar ao menu...')
+        iniciar_jogo()
 
 
 
