@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\tutorial.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tutorial.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\funcoes.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:funcoes.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\mecanicas_jogador.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:mecanicas_jogador.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\game.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:game.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\historia.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:historia.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\game.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:game.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "game.py",
               "DocumentMoniker": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\game.py",
               "RelativeDocumentMoniker": "game.py",
               "ToolTip": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\game.py",
               "RelativeToolTip": "game.py",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAADcAAABBAAAA",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAGkAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2024-06-14T23:54:30.351Z",
               "IsPinned": true,
@@ -40,28 +48,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "historia.py",
               "DocumentMoniker": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\historia.py",
               "RelativeDocumentMoniker": "historia.py",
               "ToolTip": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\historia.py",
               "RelativeToolTip": "historia.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2024-06-14T23:55:02.623Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "mecanicas_jogador.py",
               "DocumentMoniker": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\mecanicas_jogador.py",
               "RelativeDocumentMoniker": "mecanicas_jogador.py",
               "ToolTip": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\mecanicas_jogador.py",
               "RelativeToolTip": "mecanicas_jogador.py",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAOcAAAA2AAAA",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2024-06-14T23:54:32.848Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "funcoes.py",
+              "DocumentMoniker": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\funcoes.py",
+              "RelativeDocumentMoniker": "funcoes.py",
+              "ToolTip": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\funcoes.py",
+              "RelativeToolTip": "funcoes.py",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAE8AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-06-15T01:38:09.869Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "tutorial.py",
+              "DocumentMoniker": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\tutorial.py",
+              "RelativeDocumentMoniker": "tutorial.py",
+              "ToolTip": "C:\\Users\\MacNoosh\\Documents\\GitHub\\RPG\\tutorial.py",
+              "RelativeToolTip": "tutorial.py",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-06-15T02:11:37.647Z",
+              "IsPinned": true,
               "EditorCaption": ""
             }
           ]
